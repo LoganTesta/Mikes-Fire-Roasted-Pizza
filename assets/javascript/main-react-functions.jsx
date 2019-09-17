@@ -1,0 +1,229 @@
+
+class PizzaOrderContent extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            numberOfPizzasTotal: 0,
+            sizeOfPizza: "",
+            typeOfPizza: "",
+            storePickup: "",
+            orderName: "",
+            orderEmail: "",
+            orderPhone: "",
+            orderComments: "",
+
+            orderTotalCost: 0,
+
+            orderTextOutput: "",
+            validationFeedbackClientSide: ""
+        };
+    }
+
+    adjustPizzaOrder = (event) => {
+        let nameOfElement = event.target.name;
+        let valueProvided = event.target.value;
+
+        if (nameOfElement === "numberOfPizzasTotal") {
+            if (!Number(valueProvided)) {
+                this.setState({validationFeedbackClientSide: "Please enter a number from 1-10."});
+                this.setState({[nameOfElement]: 0});
+            } else if (valueProvided > 10) {
+                this.setState({validationFeedbackClientSide: "Please call us in advance for orders of more than 10 pizzas."});
+                this.setState({[nameOfElement]: 0});
+            } else {
+                this.setState({[nameOfElement]: valueProvided});
+                this.setState({validationFeedbackClientSide: ""});
+            }
+        } else {
+            this.setState({[nameOfElement]: valueProvided});
+            this.setState({validationFeedbackClientSide: ""});
+        }
+    }
+
+    checkValidity = (event) => {
+        // event.preventDefault();
+        let validOrder = true;
+
+        if (this.state.numberOfPizzasTotal.length < 1) {
+            validOrder = false;
+        } else if (this.state.sizeOfPizza.length < 1) {
+            validOrder = false;
+        } else if (this.state.typeOfPizza.length < 1) {
+            validOrder = false;
+        } else if (this.state.storePickup.length < 1) {
+            validOrder = false;
+        } else if (this.state.orderName.length < 1) {
+            validOrder = false;
+        } else if (this.state.orderPhone.length !== 10) {
+            validOrder = false;
+        } else if (this.state.numberOfPizzasTotal < 1) {
+            validOrder = false;
+        } else if (10 < this.state.numberOfPizzasTotal) {
+            validOrder = false;
+        }
+
+        if (this.state.orderEmail.length > 0) {
+            if (this.state.orderEmail.length < 6) {
+                validOrder = false;
+            }
+        }
+
+        if (validOrder) {
+            document.getElementById("orderPizzaButton").removeAttribute("disabled");
+        } else {
+            document.getElementById("orderPizzaButton").setAttribute("disabled", "disabled");
+        }
+    }
+
+    render() {
+        //Conditional rendering
+        let correctOrder = true;
+
+        if (this.state.numberOfPizzasTotal === "") {
+            correctOrder = false;
+        } else if (this.state.sizeOfPizza === "") {
+            correctOrder = false;
+        } else if (this.state.typeOfPizza === "") {
+            correctOrder = false;
+        } else if (this.state.storePickup === "") {
+            correctOrder = false;
+        }
+
+        if (correctOrder) {
+            if (1 <= this.state.numberOfPizzasTotal && this.state.numberOfPizzasTotal < 2) {
+                this.state.orderTextOutput = this.state.numberOfPizzasTotal + " " + this.state.sizeOfPizza + " " + this.state.typeOfPizza + " Pizza " + " at our " + this.state.storePickup + " store.";
+            } else if (2 <= this.state.numberOfPizzasTotal && this.state.numberOfPizzasTotal <= 10) {
+                this.state.orderTextOutput = this.state.numberOfPizzasTotal + " " + this.state.sizeOfPizza + " " + this.state.typeOfPizza + " Pizzas " + " at our " + this.state.storePickup + " store.";
+            }
+
+            //Determine cost
+            var sizeOfPizza = this.state.sizeOfPizza;
+            var numberPizzas = this.state.numberOfPizzasTotal;
+            var typeOfPizza = this.state.typeOfPizza;
+            var baseCost = 0;
+
+            if (sizeOfPizza === "Personal") {
+                baseCost = 5;
+            } else if (sizeOfPizza === "Small") {
+                baseCost = 10;
+            } else if (sizeOfPizza === "Medium") {
+                baseCost = 11;
+            } else if (sizeOfPizza === "Large") {
+                baseCost = 12;
+            }
+
+            if (sizeOfPizza === "Personal") {
+                if (typeOfPizza === "Cheese") {
+                    baseCost += 0;
+                } else if (typeOfPizza === "Veggie") {
+                    baseCost += 0.5;
+                } else if (typeOfPizza === "Pepperoni") {
+                    baseCost += 0.75;
+                } else if (typeOfPizza === "Supreme") {
+                    baseCost += 1;
+                } else if (typeOfPizza === "Hawaiian") {
+                    baseCost += 1;
+                }
+            } else {
+                if (typeOfPizza === "Cheese") {
+                    baseCost += 0;
+                } else if (typeOfPizza === "Veggie") {
+                    baseCost += 2;
+                } else if (typeOfPizza === "Pepperoni") {
+                    baseCost += 3;
+                } else if (typeOfPizza === "Supreme") {
+                    baseCost += 4;
+                } else if (typeOfPizza === "Hawaiian") {
+                    baseCost += 4;
+                }
+            }
+            this.state.orderTotalCost = numberPizzas * baseCost;
+        } else {
+            this.state.orderTextOutput = "";
+        }
+
+
+        return <div class="order-pizza" onMouseOver={this.checkValidity}>
+            <div class="order-pizza__header"><h3>Order a Pizza!  Pick it up in 30 Minutes!</h3></div>
+            <div><p>Your Order: <strong>{this.state.orderTextOutput}</strong></p></div>
+            <div class="order-total" name="orderTotalCost">Total: ${this.state.orderTotalCost}</div>
+        
+            <div>{this.state.validationFeedbackClientSide}</div>
+            <div>** Required</div>
+            <div>
+                <form class="form pizza-order" name="pizzaOrder" method="post" action="validate-pizza-order-form.php">       
+                    <input type="hidden" id="orderTotalCost" name="orderTotalCost" value={this.state.orderTotalCost} />
+                    <div class="form__input-container">
+                        <label class="form__label">** Number of Pizzas</label>
+                        <input class="form__input" name="numberOfPizzasTotal" type="text" onChange={this.adjustPizzaOrder} />
+                        <div class="clear-both"></div>
+                    </div>
+                    <div class="form__input-container">
+                        <label class="form__label">** Size</label>
+                        <select class="form__input" name="sizeOfPizza" onChange={this.adjustPizzaOrder}>
+                            <option value="" label=" "></option>
+                            <option value="Personal">Personal: 6"</option>
+                            <option value="Small">Small: 12"</option>
+                            <option value="Medium">Medium: 15"</option>
+                            <option value="Large">Large 18"</option>
+                        </select>
+                        <div class="clear-both"></div>
+                    </div>
+                    <div class="form__input-container">
+                        <label class="form__label">** Choose Type of Pizza</label>
+                        <select class="form__input" name="typeOfPizza" onChange={this.adjustPizzaOrder}>
+                            <option value="" label=" "></option>
+                            <option value="Cheese">Cheese</option>
+                            <option value="Veggie">Veggie</option>
+                            <option value="Pepperoni">Pepperoni</option>
+                            <option value="Supreme">Supreme</option>
+                            <option value="Hawaiian">Hawaiian</option>
+                        </select>
+                        <div class="clear-both"></div>
+                    </div>
+                    <div class="form__input-container">
+                        <label class="form__label">** Store Pickup</label>
+                        <select class="form__input" name="storePickup" onChange={this.adjustPizzaOrder}>
+                            <option value="" label=" "></option>
+                            <option value="SE Portland">SE Portland</option>
+                            <option value="Happy Valley">Happy Valley</option>
+                            <option value="Tigard">Tigard</option>
+                            <option value="Milwaukie">Milwaukie</option>
+                        </select>
+                        <div class="clear-both"></div>
+                    </div>
+                    <div class="form__input-container">
+                        <label class="form__label">** Your Name</label>
+                        <input class="form__input" name="orderName" type="text" onChange={this.adjustPizzaOrder} />
+                        <div class="clear-both"></div>
+                    </div>
+                    <div class="form__input-container">
+                        <label class="form__label">Your Email</label>
+                        <input class="form__input" name="orderEmail" type="email" onChange={this.adjustPizzaOrder} />
+                        <div class="clear-both"></div>
+                    </div>
+                    <div class="form__input-container">
+                        <label class="form__label">** Phone (10 digits, no dashes)</label>
+                        <input class="form__input" name="orderPhone" type="number" onChange={this.adjustPizzaOrder} />
+                        <div class="clear-both"></div>
+                    </div>
+                    <div class="form__input-container">
+                        <label class="form__label">Comments</label>
+                        <textarea class="form__input" name="orderComments" onChange={this.adjustPizzaOrder} />
+                        <div class="clear-both"></div>
+                    </div>
+        
+                    <div class="form__input-container">
+                        <input class="form__submit-button" id="orderPizzaButton" name="orderButton" type="submit" value="Pizza Time!" disabled="disabled" />
+                        <div class="clear-both"></div>
+                    </div>
+                    <p>Pay at pick up, cash, debit, or credit gladly accepted.</p>
+                    <p>Note: For orders of more than 10 pizzas, please call us at 1-503-999-9999 
+                        or <a href="contact-us.php"><strong>use our contact form</strong></a> <strong><em>at least 3 days in advance</em></strong> to ensure timely baking!  Thank you.</p>
+                </form>
+            </div>
+        </div>;
+    }
+};
+
+ReactDOM.render(<PizzaOrderContent />, document.getElementsByClassName('pizza-order-content')[0]);
