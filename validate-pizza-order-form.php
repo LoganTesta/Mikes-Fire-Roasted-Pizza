@@ -51,6 +51,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     else if (Trim($UserName) === "") {
         $PassedValidation = false;
     }
+    else if (Trim($UserEmail) === "") {
+        $PassedValidation = false;
+    }
     else if (Trim($UserPhone) === "") {
         $PassedValidation = false;
     }

@@ -25,6 +25,19 @@ class ContactFormContent extends React.Component {
         } else if (this.state.userComments.length < 1) {
             validOrder = false;
         }
+        
+        var atPosition = this.state.userEmail.indexOf("@");
+        var dotPosition = this.state.userEmail.lastIndexOf(".");
+        var lastEmailCharacter = this.state.userEmail.length - 1;
+
+        if (atPosition <= 0) {
+            validOrder = false;
+        } else if (atPosition + 1 >= dotPosition) {
+            validOrder = false;
+        } else if (dotPosition + 1 >= lastEmailCharacter) {
+            validOrder = false;
+        }
+        
 
         if (validOrder) {
             document.getElementById("contactUsButton").removeAttribute("disabled");

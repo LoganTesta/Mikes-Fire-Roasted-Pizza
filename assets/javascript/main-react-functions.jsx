@@ -54,6 +54,8 @@ class PizzaOrderContent extends React.Component {
             validOrder = false;
         } else if (this.state.orderName.length < 1) {
             validOrder = false;
+        } else if (this.state.orderEmail.length < 6) {
+            validOrder = false;
         } else if (this.state.orderPhone.length !== 10) {
             validOrder = false;
         } else if (this.state.numberOfPizzasTotal < 1) {
@@ -62,11 +64,18 @@ class PizzaOrderContent extends React.Component {
             validOrder = false;
         }
 
-        if (this.state.orderEmail.length > 0) {
-            if (this.state.orderEmail.length < 6) {
-                validOrder = false;
-            }
+        var atPosition = this.state.orderEmail.indexOf("@");
+        var dotPosition = this.state.orderEmail.lastIndexOf(".");
+        var lastEmailCharacter = this.state.orderEmail.length - 1;
+
+        if (atPosition <= 0) {
+            validOrder = false;
+        } else if (atPosition + 1 >= dotPosition) {
+            validOrder = false;
+        } else if (dotPosition + 1 >= lastEmailCharacter) {
+            validOrder = false;
         }
+
 
         if (validOrder) {
             document.getElementById("orderPizzaButton").removeAttribute("disabled");
@@ -198,7 +207,7 @@ class PizzaOrderContent extends React.Component {
                         <div class="clear-both"></div>
                     </div>
                     <div class="form__input-container">
-                        <label class="form__label">Your Email</label>
+                        <label class="form__label">** Your Email</label>
                         <input class="form__input" name="orderEmail" type="email" onChange={this.adjustPizzaOrder} />
                         <div class="clear-both"></div>
                     </div>
