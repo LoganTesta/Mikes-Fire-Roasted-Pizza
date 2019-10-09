@@ -26,9 +26,9 @@ class ContactFormContent extends React.Component {
             validOrder = false;
         }
         
-        var atPosition = this.state.userEmail.indexOf("@");
-        var dotPosition = this.state.userEmail.lastIndexOf(".");
-        var lastEmailCharacter = this.state.userEmail.length - 1;
+        let atPosition = this.state.userEmail.indexOf("@");
+        let dotPosition = this.state.userEmail.lastIndexOf(".");
+        let lastEmailCharacter = this.state.userEmail.length - 1;
 
         if (atPosition <= 0) {
             validOrder = false;

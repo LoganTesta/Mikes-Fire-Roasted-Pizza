@@ -64,9 +64,9 @@ class PizzaOrderContent extends React.Component {
             validOrder = false;
         }
 
-        var atPosition = this.state.orderEmail.indexOf("@");
-        var dotPosition = this.state.orderEmail.lastIndexOf(".");
-        var lastEmailCharacter = this.state.orderEmail.length - 1;
+        let atPosition = this.state.orderEmail.indexOf("@");
+        let dotPosition = this.state.orderEmail.lastIndexOf(".");
+        let lastEmailCharacter = this.state.orderEmail.length - 1;
 
         if (atPosition <= 0) {
             validOrder = false;
@@ -106,10 +106,10 @@ class PizzaOrderContent extends React.Component {
             }
 
             //Determine cost
-            var sizeOfPizza = this.state.sizeOfPizza;
-            var numberPizzas = this.state.numberOfPizzasTotal;
-            var typeOfPizza = this.state.typeOfPizza;
-            var baseCost = 0;
+            let sizeOfPizza = this.state.sizeOfPizza;
+            let numberPizzas = this.state.numberOfPizzasTotal;
+            let typeOfPizza = this.state.typeOfPizza;
+            let baseCost = 0;
 
             if (sizeOfPizza === "Personal") {
                 baseCost = 5;
