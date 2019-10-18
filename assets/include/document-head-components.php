@@ -10,5 +10,5 @@
 <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
-<link rel="stylesheet" type="text/css" href="assets/css/main-styles.css?mod=10122019" />
+<link rel="stylesheet" type="text/css" href="assets/css/main-styles.css?mod=10182019" />
 <link rel="stylesheet" type="text/css" href="assets/css/print-styles.css?mod=09092019" media="print" />
