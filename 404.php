@@ -40,8 +40,6 @@ session_start();
         <script type="text/javascript" src="assets/javascript/javascript-functions.js"></script>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
-                setCurrentPage(-1, "mobileNav");
-                setCurrentPage(-1, "desktopNav");
             });
         </script>     
         <script type="text/babel" src="assets/javascript/main-react-functions.jsx"></script>
