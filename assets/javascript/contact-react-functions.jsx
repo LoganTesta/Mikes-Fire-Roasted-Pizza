@@ -47,39 +47,44 @@ class ContactFormContent extends React.Component {
     }
 
     render() {
-        return <div class="content-row">
-            <div class="col-sma-12">
+        return <div className="content-row">
+            <div className="col-sma-12">
                 <h3>Write Us!</h3>
                 <p>Thank you for writing us <strong>{this.state.userName}</strong> at Mike's Fire-Roasted Pizza.</p>
                 <div>** Required</div>
-                <form class="form contact-form" name="contactForm" method="post" action="validate-contact-form.php" onMouseOver={this.checkValidity}>
-                    <div class="form__input-container">
-                        <label class="form__label">** Your Name</label>
-                        <input class="form__input" name="userName" type="text" onChange={this.updateUserProvidedInfo} />
-                        <div class="clear-both"></div>
+                <form className="form contact-form" name="contactForm" method="post" action="validate-contact-form.php" onMouseOver={this.checkValidity}>
+                    <div className="form__input-container">
+                        <label className="form__label">** Your Name</label>
+                        <input className="form__input" name="userName" type="text" onChange={this.updateUserProvidedInfo} />
+                        <div className="clear-both"></div>
                     </div>
-                    <div class="form__input-container">
-                        <label class="form__label">** Your Email</label>
-                        <input class="form__input" name="userEmail" type="email" onChange={this.updateUserProvidedInfo} />
-                        <div class="clear-both"></div>
+                    <div className="form__input-container">
+                        <label className="form__label">** Your Email</label>
+                        <input className="form__input" name="userEmail" type="email" onChange={this.updateUserProvidedInfo} />
+                        <div className="clear-both"></div>
                     </div>
-                    <div class="form__input-container">
-                        <label class="form__label">Subject</label>
-                        <input class="form__input" name="userSubject" type="text" onChange={this.updateUserProvidedInfo} />
-                        <div class="clear-both"></div>
+                    <div className="form__input-container">
+                        <label className="form__label">Subject</label>
+                        <input className="form__input" name="userSubject" type="text" onChange={this.updateUserProvidedInfo} />
+                        <div className="clear-both"></div>
                     </div>
-                    <div class="form__input-container">
-                        <label class="form__label">** Comments</label>
-                        <textarea class="form__input" name="userComments" onChange={this.updateUserProvidedInfo} />
-                        <div class="clear-both"></div>
+                    <div className="form__input-container">
+                        <label className="form__label">** Comments</label>
+                        <textarea className="form__input" name="userComments" onChange={this.updateUserProvidedInfo} />
+                        <div className="clear-both"></div>
                     </div>
-                    <div class="form__input-container">
-                        <input class="form__submit-button" id="contactUsButton" name="submitButton" type="submit" value="Contact Us!" disabled="disabled" />
-                        <div class="clear-both"></div>
+                    <div className="form__input-container">
+                        <input className="form__submit-button" id="contactUsButton" name="submitButton" type="submit" value="Contact Us!" disabled="disabled" />
+                        <div className="clear-both"></div>
                     </div>
                 </form>
             </div>
         </div>;
     }
 };
-ReactDOM.render(<ContactFormContent />, document.getElementsByClassName('contact-form-content')[0]);
+const contactFormContent = document.getElementsByClassName('contact-form-content')[0];
+
+if(contactFormContent){
+    ReactDOM.render(<ContactFormContent />, contactFormContent);
+}
+

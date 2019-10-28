@@ -152,35 +152,35 @@ class PizzaOrderContent extends React.Component {
         }
 
 
-        return <div class="order-pizza" onMouseOver={this.checkValidity}>
-            <div class="order-pizza__header"><h3>Order a Pizza!  Pick it up in 30 Minutes!</h3></div>
+        return <div className="order-pizza" onMouseOver={this.checkValidity}>
+            <div className="order-pizza__header"><h3>Order a Pizza!  Pick it up in 30 Minutes!</h3></div>
             <div><p>Your Order: <strong>{this.state.orderTextOutput}</strong></p></div>
-            <div class="order-total" name="orderTotalCost">Total: ${this.state.orderTotalCost}</div>
+            <div className="order-total" name="orderTotalCost">Total: ${this.state.orderTotalCost}</div>
         
             <div>{this.state.validationFeedbackClientSide}</div>
             <div>** Required</div>
             <div>
-                <form class="form pizza-order" name="pizzaOrder" method="post" action="validate-pizza-order-form.php">       
+                <form className="form pizza-order" name="pizzaOrder" method="post" action="validate-pizza-order-form.php">       
                     <input type="hidden" id="orderTotalCost" name="orderTotalCost" value={this.state.orderTotalCost} />
-                    <div class="form__input-container">
-                        <label class="form__label">** Number of Pizzas</label>
-                        <input class="form__input" name="numberOfPizzasTotal" type="text" onChange={this.adjustPizzaOrder} />
-                        <div class="clear-both"></div>
+                    <div className="form__input-container">
+                        <label className="form__label">** Number of Pizzas</label>
+                        <input className="form__input" name="numberOfPizzasTotal" type="text" onChange={this.adjustPizzaOrder} />
+                        <div className="clear-both"></div>
                     </div>
-                    <div class="form__input-container">
-                        <label class="form__label">** Size</label>
-                        <select class="form__input" name="sizeOfPizza" onChange={this.adjustPizzaOrder}>
+                    <div className="form__input-container">
+                        <label className="form__label">** Size</label>
+                        <select className="form__input" name="sizeOfPizza" onChange={this.adjustPizzaOrder}>
                             <option value="" label=" "></option>
                             <option value="Personal">Personal: 6"</option>
                             <option value="Small">Small: 12"</option>
                             <option value="Medium">Medium: 15"</option>
                             <option value="Large">Large 18"</option>
                         </select>
-                        <div class="clear-both"></div>
+                        <div className="clear-both"></div>
                     </div>
-                    <div class="form__input-container">
-                        <label class="form__label">** Choose Type of Pizza</label>
-                        <select class="form__input" name="typeOfPizza" onChange={this.adjustPizzaOrder}>
+                    <div className="form__input-container">
+                        <label className="form__label">** Choose Type of Pizza</label>
+                        <select className="form__input" name="typeOfPizza" onChange={this.adjustPizzaOrder}>
                             <option value="" label=" "></option>
                             <option value="Cheese">Cheese</option>
                             <option value="Veggie">Veggie</option>
@@ -188,43 +188,43 @@ class PizzaOrderContent extends React.Component {
                             <option value="Supreme">Supreme</option>
                             <option value="Hawaiian">Hawaiian</option>
                         </select>
-                        <div class="clear-both"></div>
+                        <div className="clear-both"></div>
                     </div>
-                    <div class="form__input-container">
-                        <label class="form__label">** Store Pickup</label>
-                        <select class="form__input" name="storePickup" onChange={this.adjustPizzaOrder}>
+                    <div className="form__input-container">
+                        <label className="form__label">** Store Pickup</label>
+                        <select className="form__input" name="storePickup" onChange={this.adjustPizzaOrder}>
                             <option value="" label=" "></option>
                             <option value="SE Portland">SE Portland</option>
                             <option value="Happy Valley">Happy Valley</option>
                             <option value="Tigard">Tigard</option>
                             <option value="Milwaukie">Milwaukie</option>
                         </select>
-                        <div class="clear-both"></div>
+                        <div className="clear-both"></div>
                     </div>
-                    <div class="form__input-container">
-                        <label class="form__label">** Your Name</label>
-                        <input class="form__input" name="orderName" type="text" onChange={this.adjustPizzaOrder} />
-                        <div class="clear-both"></div>
+                    <div className="form__input-container">
+                        <label className="form__label">** Your Name</label>
+                        <input className="form__input" name="orderName" type="text" onChange={this.adjustPizzaOrder} />
+                        <div className="clear-both"></div>
                     </div>
-                    <div class="form__input-container">
-                        <label class="form__label">** Your Email</label>
-                        <input class="form__input" name="orderEmail" type="email" onChange={this.adjustPizzaOrder} />
-                        <div class="clear-both"></div>
+                    <div className="form__input-container">
+                        <label className="form__label">** Your Email</label>
+                        <input className="form__input" name="orderEmail" type="email" onChange={this.adjustPizzaOrder} />
+                        <div className="clear-both"></div>
                     </div>
-                    <div class="form__input-container">
-                        <label class="form__label">** Phone (10 digits, no dashes)</label>
-                        <input class="form__input" name="orderPhone" type="number" onChange={this.adjustPizzaOrder} />
-                        <div class="clear-both"></div>
+                    <div className="form__input-container">
+                        <label className="form__label">** Phone (10 digits, no dashes)</label>
+                        <input className="form__input" name="orderPhone" type="number" onChange={this.adjustPizzaOrder} />
+                        <div className="clear-both"></div>
                     </div>
-                    <div class="form__input-container">
-                        <label class="form__label">Comments</label>
-                        <textarea class="form__input" name="orderComments" onChange={this.adjustPizzaOrder} />
-                        <div class="clear-both"></div>
+                    <div className="form__input-container">
+                        <label className="form__label">Comments</label>
+                        <textarea className="form__input" name="orderComments" onChange={this.adjustPizzaOrder} />
+                        <div className="clear-both"></div>
                     </div>
         
-                    <div class="form__input-container">
-                        <input class="form__submit-button" id="orderPizzaButton" name="orderButton" type="submit" value="Pizza Time!" disabled="disabled" />
-                        <div class="clear-both"></div>
+                    <div className="form__input-container">
+                        <input className="form__submit-button" id="orderPizzaButton" name="orderButton" type="submit" value="Pizza Time!" disabled="disabled" />
+                        <div className="clear-both"></div>
                     </div>
                     <p>Pay at pick up, cash, debit, or credit gladly accepted.</p>
                     <p>Note: For orders of more than 10 pizzas, please call us at 1-503-999-9999 
@@ -235,4 +235,9 @@ class PizzaOrderContent extends React.Component {
     }
 };
 
-ReactDOM.render(<PizzaOrderContent />, document.getElementsByClassName('pizza-order-content')[0]);
+const pizzaOrderContent = document.getElementsByClassName('pizza-order-content')[0];
+
+if(pizzaOrderContent){
+    ReactDOM.render(<PizzaOrderContent />, pizzaOrderContent);
+}
+
