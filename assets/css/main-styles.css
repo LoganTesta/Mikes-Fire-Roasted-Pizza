@@ -246,7 +246,7 @@ a:hover { color: var(--color-2); }
 
 .social-logo { display: inline-block; padding: 0 20px; }
 .social-logo__social-icon { color: #ffffff; transition: 0.2s; }
-.social-logo__social-icon:hover { color: var(--color-1); transition: 0.2s; }
+.social-logo__social-icon:hover { color: var(--color-5); transition: 0.2s; }
 
 .day-hours__day, .day-hours__hours { display: inline-block; padding: 5px; font-size: 18px; }
 
