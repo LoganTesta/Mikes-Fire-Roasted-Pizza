@@ -259,7 +259,7 @@ a:hover { color: var(--color-2); }
 .form__input-container { padding: 15px 0px; }
 .form__label { display: inline-block; width: 100%; padding-bottom: 6px; }
 .form__input { display: inline-block; width: 100%; padding: 10px; border-radius: 15px; }
-.form__submit-button {  opacity: 1; padding: 15px; border-radius: 15px; background-color: var(--color-1); color: #ffffff; text-align: center; cursor: pointer; transition: 0.4s ease-in; }
+.form__submit-button { opacity: 1; padding: 15px; border-radius: 15px; background-color: var(--color-1); color: #ffffff; text-align: center; cursor: pointer; transition: 0.4s ease-in; }
 .form__submit-button:hover { background-color: var(--color-3); transition: 0.4s ease-in; }
 .form__submit-button:disabled { opacity: 0.2; cursor: default; transition: 0.4s ease-in; }
 
@@ -360,7 +360,7 @@ a:hover { color: var(--color-2); }
     
     
     /*General groups styles*/
-    .order-pizza { width: 550px; }
+    .order-pizza { }
     
     .content-background-container { }
     .content__content-image { height: 400px; }
