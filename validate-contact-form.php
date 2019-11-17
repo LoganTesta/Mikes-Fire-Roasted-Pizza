@@ -1,5 +1,5 @@
 <?php declare(strict_types = 1);
-ob_start();
+ ob_start();
 session_start();
 
 
@@ -35,19 +35,21 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $ValidationResponse .= "Sorry validation failed.  Please check all fields again.<br />";
     }
 
-    /* Create the e-mail body. */
-    $Body = "";
-    $Body .= "User Name: " . $UserName . "\n";
-    $Body .= "User Email: " . $UserEmail . "\n";
-    $Body .= "Subject: " . $UserSubject . "\n";
-    $Body .= "User Comments: " . $UserComments . "\n";
+    if ($PassedValidation) {
+        /* Create the e-mail body. */
+        $Body = "";
+        $Body .= "User Name: " . $UserName . "\n";
+        $Body .= "User Email: " . $UserEmail . "\n";
+        $Body .= "Subject: " . $UserSubject . "\n";
+        $Body .= "User Comments: " . $UserComments . "\n";
 
-    /* Send the e-mail. */
-    $SuccessfulSubmission = mail($SendEmailTo, "Mike's Fire-Roasted Pizza: " . $UserSubject, $Body, "From: <$UserEmail>");
-    if ($SuccessfulSubmission) {
-        $ValidationResponse .= "Your form was successfully submitted.  Thanks for contacting us!<br />";
-    } else if ($SuccessfulSubmission === false) {
-        $ValidationResponse .= "Submission failed. Please try again.<br />";
+        /* Send the e-mail. */
+        $SuccessfulSubmission = mail($SendEmailTo, "Mike's Fire-Roasted Pizza: " . $UserSubject, $Body, "From: <$UserEmail>");
+        if ($SuccessfulSubmission) {
+            $ValidationResponse .= "Your form was successfully submitted.  Thanks for contacting us!<br />";
+        } else if ($SuccessfulSubmission === false) {
+            $ValidationResponse .= "Submission failed. Please try again.<br />";
+        }
     }
 }
 ?>

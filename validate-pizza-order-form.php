@@ -1,36 +1,36 @@
 <?php declare(strict_types = 1);
-ob_start();
+ ob_start();
 session_start();
 
 $ValidationResponse = "";
 
-    
-    $NumberOfPizzasTotal = "";
-    $SizeOfPizza = "";
-    $TypeOfPizza = "";
-    $StorePickup = "";
- 
-    $UserName = "";
-    $UserEmail = "";
-    $UserPhone = "";
-    $UserComments = "";
-    
-    $OrderTotalCost = "";
+
+$NumberOfPizzasTotal = "";
+$SizeOfPizza = "";
+$TypeOfPizza = "";
+$StorePickup = "";
+
+$UserName = "";
+$UserEmail = "";
+$UserPhone = "";
+$UserComments = "";
+
+$OrderTotalCost = "";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    
+
     $NumberOfPizzasTotal = htmlspecialchars(strip_tags(trim($_POST['numberOfPizzasTotal'])));
     $SizeOfPizza = htmlspecialchars(strip_tags(trim($_POST['sizeOfPizza'])));
     $TypeOfPizza = htmlspecialchars(strip_tags(trim($_POST['typeOfPizza'])));
     $StorePickup = htmlspecialchars(strip_tags(trim($_POST['storePickup'])));
- 
+
     $UserName = htmlspecialchars(strip_tags(trim($_POST['orderName'])));
     $UserEmail = htmlspecialchars(strip_tags(trim($_POST['orderEmail'])));
     $UserPhone = htmlspecialchars(strip_tags(trim($_POST['orderPhone'])));
     $UserComments = htmlspecialchars(strip_tags(trim($_POST['orderComments'])));
 
     $OrderTotalCost = htmlspecialchars(strip_tags(trim($_POST['orderTotalCost'])));
-    
+
     $SendEmailTo = "logan.testa@outlook.com";
     $Subject = "Mike's Fire-Roasted Pizza: Pizza order.";
 
@@ -38,74 +38,65 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $PassedValidation = true;
     if (Trim($NumberOfPizzasTotal) === "") {
         $PassedValidation = false;
-    }
-    else if (Trim($SizeOfPizza) === "") {
+    } else if (Trim($SizeOfPizza) === "") {
         $PassedValidation = false;
-    }
-    else if (Trim($TypeOfPizza) === "") {
+    } else if (Trim($TypeOfPizza) === "") {
         $PassedValidation = false;
-    }   
-    else if (Trim($StorePickup) === "") {
+    } else if (Trim($StorePickup) === "") {
         $PassedValidation = false;
-    }    
-    else if (Trim($UserName) === "") {
+    } else if (Trim($UserName) === "") {
         $PassedValidation = false;
-    }
-    else if (Trim($UserEmail) === "") {
+    } else if (Trim($UserEmail) === "") {
         $PassedValidation = false;
-    }
-    else if (Trim($UserPhone) === "") {
+    } else if (Trim($UserPhone) === "") {
         $PassedValidation = false;
-    }
-    else if (Trim($OrderTotalCost) === "") {
+    } else if (Trim($OrderTotalCost) === "") {
         $PassedValidation = false;
     }
 
-    
-    
+
     /* More advanced e-mail validation */
-    if ($UserEmail!=="" && !filter_var($UserEmail, FILTER_VALIDATE_EMAIL)) {
+    if ($UserEmail !== "" && !filter_var($UserEmail, FILTER_VALIDATE_EMAIL)) {
         $PassedValidation = false;
     }
 
-    /* Telephone Validation*/   
-    $UserPhoneNoDashesString=str_replace("-", "", (string)$UserPhone); //remove any dashes present, and convert to a string to validate length.
-    
-    if(strlen($UserPhoneNoDashesString)!==10){
+    /* Telephone Validation */
+    $UserPhoneNoDashesString = str_replace("-", "", (string) $UserPhone); //remove any dashes present, and convert to a string to validate length.
+
+    if (strlen($UserPhoneNoDashesString) !== 10) {
         $PassedValidation = false;
         $ValidationResponse .= "Please enter a 10 digit phone number.<br />";
     }
-     
-    
+
+
     if ($PassedValidation === false) {
         $ValidationResponse .= "Sorry validation failed.  Please check all fields again.<br />";
-
     }
-    
 
-    /* Create the e-mail body. */
-    $Body = "";
-    $Body .= "Customer Name: " . $UserName . "\n";
-    $Body .= "Customer Email: " . $UserEmail . "\n";
-    $Body .= "Customer Phone: " . $UserPhone . "\n";
-    $Body .= "Subject: " . $Subject . "\n";
-    $Body .= "Order: " . $NumberOfPizzasTotal . " " . $SizeOfPizza . " " . $TypeOfPizza . " pizza/pizzas.\n"; 
-    $Body .= "Location: " . $StorePickup . "\n";
-    $Body .= "User Comments: " . $UserComments . "\n";
-    $Body .= "Order Total: $" . $OrderTotalCost . "\n";
-    
+    if ($PassedValidation) {
+        /* Create the e-mail body. */
+        $Body = "";
+        $Body .= "Customer Name: " . $UserName . "\n";
+        $Body .= "Customer Email: " . $UserEmail . "\n";
+        $Body .= "Customer Phone: " . $UserPhone . "\n";
+        $Body .= "Subject: " . $Subject . "\n";
+        $Body .= "Order: " . $NumberOfPizzasTotal . " " . $SizeOfPizza . " " . $TypeOfPizza . " pizza/pizzas.\n";
+        $Body .= "Location: " . $StorePickup . "\n";
+        $Body .= "User Comments: " . $UserComments . "\n";
+        $Body .= "Order Total: $" . $OrderTotalCost . "\n";
 
-    /* Send the e-mail. */
-    $SuccessfulSubmission = mail($SendEmailTo, $Subject, $Body, "From: <$UserEmail>");
-    if ($SuccessfulSubmission) {
-        $ValidationResponse .= "Success!<br />";
-        $ValidationResponse .= "Thank you <strong>" . $UserName . "</strong>.<br />";
-        $ValidationResponse .= "Please pick up your order at the <strong>"  . $StorePickup . "</strong> store.<br />";
-        $ValidationResponse .= "<strong>Your order: " . $NumberOfPizzasTotal . " " . $SizeOfPizza . " " . $TypeOfPizza . " pizza/pizzas.</strong><br />";
-        $ValidationResponse .= "Comments: " . $UserComments . "<br />";
-        $ValidationResponse .= "<strong>Total cost</strong> (pay in store): <strong>$" . $OrderTotalCost . "</strong>.<br />";      
-    } else if ($SuccessfulSubmission === false) {
-        $ValidationResponse .= "Submission failed. Please try again.";
+        /* Send the e-mail. */
+        $SuccessfulSubmission = mail($SendEmailTo, $Subject, $Body, "From: <$UserEmail>");
+        if ($SuccessfulSubmission) {
+            $ValidationResponse .= "Success!<br />";
+            $ValidationResponse .= "Thank you <strong>" . $UserName . "</strong>.<br />";
+            $ValidationResponse .= "Please pick up your order at the <strong>" . $StorePickup . "</strong> store.<br />";
+            $ValidationResponse .= "<strong>Your order: " . $NumberOfPizzasTotal . " " . $SizeOfPizza . " " . $TypeOfPizza . " pizza/pizzas.</strong><br />";
+            $ValidationResponse .= "Comments: " . $UserComments . "<br />";
+            $ValidationResponse .= "<strong>Total cost</strong> (pay in store): <strong>$" . $OrderTotalCost . "</strong>.<br />";
+        } else if ($SuccessfulSubmission === false) {
+            $ValidationResponse .= "Submission failed. Please try again.";
+        }
     }
 }
 ?>
