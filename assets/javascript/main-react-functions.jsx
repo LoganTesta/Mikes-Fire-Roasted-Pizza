@@ -213,7 +213,7 @@ class PizzaOrderContent extends React.Component {
                     </div>
                     <div className="form__input-container">
                         <label className="form__label">** Phone (10 digits, no dashes)</label>
-                        <input className="form__input" name="orderPhone" type="number" onChange={this.adjustPizzaOrder} />
+                        <input className="form__input" name="orderPhone" type="tel" onChange={this.adjustPizzaOrder} />
                         <div className="clear-both"></div>
                     </div>
                     <div className="form__input-container">

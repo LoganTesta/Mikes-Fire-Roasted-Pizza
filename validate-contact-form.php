@@ -1,5 +1,5 @@
 <?php declare(strict_types = 1);
- ob_start();
+ob_start();
 session_start();
 
 
@@ -17,22 +17,43 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     /* Validation time */
     $PassedValidation = true;
+    
+    $validUserName = true;
     if (Trim($UserName) === "") {
-        $PassedValidation = false;
+        $validUserName = false;
     }
+    if($validUserName === false){
+        $PassedValidation = false;
+        $ValidationResponse .= "<p>Please enter a valid name.</p>";
+    }
+    
+    
+    $validUserEmail = true;
     if (Trim($UserEmail) === "") {
-        $PassedValidation = false;
+        $validUserEmail = false;
     }
-    if (Trim($UserComments) === "") {
-        $PassedValidation = false;
-    }
-
     /* More advanced e-mail validation */
     if (!filter_var($UserEmail, FILTER_VALIDATE_EMAIL)) {
-        $PassedValidation = false;
+        $validUserEmail = false;
     }
+    if($validUserEmail === false){
+        $PassedValidation = false;
+        $ValidationResponse .= "<p>Please enter a valid email.</p>";
+    }
+    
+    
+    $validUserComments = true;
+    if (Trim($UserComments) === "") {
+        $validUserComments = false;
+    }
+    if($validUserComments === false){
+        $PassedValidation = false;
+        $ValidationResponse .= "<p>Please write your message in the comments.</p>";
+    }
+
+
     if ($PassedValidation === false) {
-        $ValidationResponse .= "Sorry validation failed.  Please check all fields again.<br />";
+        $ValidationResponse .= "<p>Sorry validation failed.  Please check all fields again.</p>";
     }
 
     if ($PassedValidation) {
@@ -46,9 +67,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         /* Send the e-mail. */
         $SuccessfulSubmission = mail($SendEmailTo, "Mike's Fire-Roasted Pizza: " . $UserSubject, $Body, "From: <$UserEmail>");
         if ($SuccessfulSubmission) {
-            $ValidationResponse .= "Your form was successfully submitted.  Thanks for contacting us!<br />";
+            $ValidationResponse .= "<p>Your form was successfully submitted.  Thanks for contacting us!</p>";
         } else if ($SuccessfulSubmission === false) {
-            $ValidationResponse .= "Submission failed. Please try again.<br />";
+            $ValidationResponse .= "<p>Submission failed. Please try again.</p>";
         }
     }
 }
@@ -87,9 +108,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         </div>
         <script type="text/javascript" src="assets/javascript/javascript-functions.js"></script>
         <script>
-            document.addEventListener("DOMContentLoaded", function () {
-               // setCurrentPage(-1, "mobileNav");
-              //  setCurrentPage(-1, "desktopNav");               
+            document.addEventListener("DOMContentLoaded", function () {             
             });
         </script>
         <script type="text/babel" src="assets/javascript/main-react-functions.jsx"></script>

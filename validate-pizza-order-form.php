@@ -1,5 +1,5 @@
 <?php declare(strict_types = 1);
- ob_start();
+ob_start();
 session_start();
 
 $ValidationResponse = "";
@@ -36,41 +36,99 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     /* Validation time */
     $PassedValidation = true;
+    
+    
+    $ValidNumberOfPizzasTotal = true;
     if (Trim($NumberOfPizzasTotal) === "") {
-        $PassedValidation = false;
-    } else if (Trim($SizeOfPizza) === "") {
-        $PassedValidation = false;
-    } else if (Trim($TypeOfPizza) === "") {
-        $PassedValidation = false;
-    } else if (Trim($StorePickup) === "") {
-        $PassedValidation = false;
-    } else if (Trim($UserName) === "") {
-        $PassedValidation = false;
-    } else if (Trim($UserEmail) === "") {
-        $PassedValidation = false;
-    } else if (Trim($UserPhone) === "") {
-        $PassedValidation = false;
-    } else if (Trim($OrderTotalCost) === "") {
-        $PassedValidation = false;
+        $ValidNumberOfPizzasTotal = false;
+    } 
+    if(ctype_digit($NumberOfPizzasTotal) === false){
+        $ValidNumberOfPizzasTotal = false;
     }
-
-
+    if($NumberOfPizzasTotal < 0 || $NumberOfPizzasTotal > 10) {
+        $ValidNumberOfPizzasTotal = false;
+    }
+    if($ValidNumberOfPizzasTotal === false){
+        $PassedValidation = false;
+        $ValidationResponse .= "<p>Order must have at least 1 pizza.  Orders over 10 pizzas: please call us 3+ days in advance.</p>";
+    }
+     
+    
+    $ValidSizeOfPizza = true;
+    if (Trim($SizeOfPizza) === "") {
+        $ValidSizeOfPizza = false;
+    } 
+    if($ValidSizeOfPizza === false){
+        $PassedValidation = false;
+        $ValidationResponse .= "<p>Please select your pizza size.</p>";
+    }
+      
+    
+    $ValidTypeOfPizza = true;
+    if (Trim($TypeOfPizza) === "") {
+        $ValidTypeOfPizza = false;
+    } 
+    if($ValidTypeOfPizza === false){
+        $PassedValidation = false;
+        $ValidationResponse .= "<p>Please select your pizza type.</p>";
+    }
+    
+    
+    $ValidStorePickup = true;
+    if (Trim($StorePickup) === "") {
+        $ValidStorePickup = false;
+    } 
+    if($ValidStorePickup === false){
+        $PassedValidation = false;
+        $ValidationResponse .= "<p>Please select your store to pickup the pizza at.</p>";
+    }
+    
+    
+    $ValidUserName = true;
+    if (Trim($UserName) === "") {
+        $ValidUserName = false;
+    } 
+    if($ValidUserName === false){
+        $PassedValidation = false;
+        $ValidationResponse .= "<p>Please enter your name.</p>";
+    }
+    
+    
+    $ValidUserEmail = true;
+    if (Trim($UserEmail) === "") {
+        $ValidUserEmail = false;
+    }   
     /* More advanced e-mail validation */
     if ($UserEmail !== "" && !filter_var($UserEmail, FILTER_VALIDATE_EMAIL)) {
-        $PassedValidation = false;
+        $ValidUserEmail = false;
     }
-
-    /* Telephone Validation */
+    if($ValidUserEmail === false){
+        $PassedValidation = false;
+        $ValidationResponse .= "<p>Please enter a valid email.</p>";
+    }
+    
+        
+    $ValidUserPhone = true;
+    if (Trim($UserPhone) === "") {
+        $ValidUserPhone = false;
+    } 
+    /* More phone validation */
     $UserPhoneNoDashesString = str_replace("-", "", (string) $UserPhone); //remove any dashes present, and convert to a string to validate length.
-
     if (strlen($UserPhoneNoDashesString) !== 10) {
-        $PassedValidation = false;
-        $ValidationResponse .= "Please enter a 10 digit phone number.<br />";
+        $ValidUserPhone = false;
+    } 
+    if (ctype_digit($UserPhoneNoDashesString) === false) {
+        $ValidUserPhone = false;
     }
+    if($ValidUserPhone === false){
+        $PassedValidation = false;
+        $ValidationResponse .= "<p>Please enter a 10 digit phone number.</p>";
+    }
+   
 
-
+    
     if ($PassedValidation === false) {
-        $ValidationResponse .= "Sorry validation failed.  Please check all fields again.<br />";
+        $ValidationResponse .= "<p>Sorry validation failed.  Please check all fields again.</p>";
     }
 
     if ($PassedValidation) {
@@ -134,9 +192,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         </div>
         <script type="text/javascript" src="assets/javascript/javascript-functions.js"></script>
         <script>
-            document.addEventListener("DOMContentLoaded", function () {
-               // setCurrentPage(-1, "mobileNav");
-               // setCurrentPage(-1, "desktopNav");               
+            document.addEventListener("DOMContentLoaded", function () {           
             });
         </script>
         <script type="text/babel" src="assets/javascript/main-react-functions.jsx"></script>
