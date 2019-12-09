@@ -12,7 +12,6 @@ ob_start();
         <th>Small</th>
         <th>Medium</th>
         <th>Large</th>
-        <td></td>
         </thead>
         <tbody>
             <tr>
