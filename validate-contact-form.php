@@ -67,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         /* Send the e-mail. */
         $SuccessfulSubmission = mail($SendEmailTo, "Mike's Fire-Roasted Pizza: " . $UserSubject, $Body, "From: <$UserEmail>");
         if ($SuccessfulSubmission) {
-            $ValidationResponse .= "<p>Your form was successfully submitted.  Thanks for contacting us!</p>";
+            $ValidationResponse .= "<p>" . $UserName . ", your message was successfully submitted.  Thanks for contacting us!</p>";
         } else if ($SuccessfulSubmission === false) {
             $ValidationResponse .= "<p>Submission failed. Please try again.</p>";
         }
