@@ -332,22 +332,23 @@ a:hover { color: var(--color-2); }
    /* General sitewide sections */
     .body-wrapper { position: relative; width: 1200px; padding: 0; margin-left: auto; margin-right: auto; }
     
-    #desktopNav { display: block; position: absolute; top: 10px; left: 200px; }
+    #desktopNav { display: block; position: absolute; top: 25px; left: 200px; }
     #mobileNav { display: none; }
     
     
     /*Header*/
-    .header { min-height: 280px; }
+    .header { min-height: 480px; }
     
-    .logo { position: absolute; top: 20px; left: 50px; width: 120px; height: 120px; }
+    .logo { position: absolute; top: 35px; left: 50px; width: 120px; height: 120px; }
     
-    .main-title-container { position: absolute; top: 120px; left: 240px; width: 478px; }
+    .main-title-container { position: absolute; top: 140px; left: 240px; width: 478px; }
     .main-title-container .main-title-container__title { width: 478px; padding: 10px 10px; font-size: 40px; }
 
-    .subtitle-container { display: inline-block; position: absolute; top: 200px; left: 240px; width: auto; max-width: none; padding: 10px 10px; }
+    .subtitle-container { display: inline-block; position: absolute; top: 220px; left: 240px; width: auto; max-width: none; padding: 10px 10px; }
    
     
     /*Footer*/
+    .footer { padding: 80px 15px; }
     .footer__social { }
     .footer__copyright { }
     .footer-hours { }
