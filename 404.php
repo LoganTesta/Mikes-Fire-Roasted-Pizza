@@ -25,8 +25,10 @@ session_start();
             <div class="content">
                 <div class="content-row">   
                     <div class="col-sma-6">
-                        <h3>404 Link Not Found</h3>
-                        <p>We're sorry, that link appears to be broken.  Click the navbar to get back to ordering great pizza from us!</p>
+                        <div class="content__text">
+                            <h3>404 Link Not Found</h3>
+                            <p>We're sorry, that link appears to be broken.  Click the navbar to get back to ordering great pizza from us!</p>
+                        </div>
                     </div>
                     <div class="col-sma-6">
                         <div class="content-background-container">

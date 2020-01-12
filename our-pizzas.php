@@ -25,8 +25,10 @@ session_start();
             <div class="content">
                 <div class="content-row">   
                     <div class="col-sma-6">
-                        <h3>Our Pizza Selection</h3>
-                        <p>Made with fresh ingredients daily- satisfy the need for good pizza!</p>
+                        <div class="content__text">
+                            <h3>Our Pizza Selection</h3>
+                            <p>Made with fresh ingredients daily- satisfy the need for good pizza!</p>
+                        </div>
                         <?php include 'assets/include/pizza-info-content.php'; ?>
                         <div class="content-row">
                             <div class="col-lar-6">

@@ -49,8 +49,10 @@ class ContactFormContent extends React.Component {
     render() {
         return <div className="content-row">
             <div className="col-sma-12">
-                <h3>Write Us!</h3>
-                <p>Thank you for writing us <strong>{this.state.userName}</strong> at Mike's Fire-Roasted Pizza.</p>
+                <div class="content__text">
+                    <h3>Write Us!</h3>
+                    <p>Thank you for writing us <strong>{this.state.userName}</strong> at Mike's Fire-Roasted Pizza.</p>
+                </div>
                 <div>** Required</div>
                 <form className="form contact-form" name="contactForm" method="post" action="validate-contact-form.php" onMouseOver={this.checkValidity}>
                     <div className="form__input-container">

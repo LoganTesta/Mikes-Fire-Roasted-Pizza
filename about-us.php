@@ -25,10 +25,12 @@ session_start();
             <div class="content">
                 <div class="content-row">   
                     <div class="col-sma-6">
-                        <h3>About Mike's Fire-Roasted Pizza</h3>
-                        <p>We opened our first store in SE Portland in 2005.  We've since expanded to 3 other locations- 
-                            Happy Valley, Tigard, and Milwaukie.  Come see why we are one of the area's best pizza shops and 
-                        why our customers keep coming back to order more of Mike's Fire-Roasted Pizza all the time.</p>
+                        <div class="content__text">
+                            <h3>About Mike's Fire-Roasted Pizza</h3>
+                            <p>We opened our first store in SE Portland in 2005.  We've since expanded to 3 other locations- 
+                                Happy Valley, Tigard, and Milwaukie.  Come see why we are one of the area's best pizza shops and 
+                                why our customers keep coming back to order more of Mike's Fire-Roasted Pizza all the time.</p>
+                        </div>
                     </div>
                     <div class="col-sma-6">
                         <div class="content-background-container">

@@ -252,6 +252,7 @@ a:hover { color: var(--color-2); }
 
 
 /*General classes*/
+.content__text { text-align: center; }
 .content__content-image--small { height: 240px; margin-bottom: 20px; }
 
 

@@ -25,8 +25,10 @@ session_start();
             <div class="content">
                 <div class="content-row">   
                     <div class="col-sma-6">
-                        <h3>500 Server Error | Mike's Fire-Roasted Pizza</h3>
-                        <p>We're sorry, there appears to be an internal error.  Click the navbar to get back to ordering great pizza from us!</p>
+                        <div class="content__text">
+                            <h3>500 Server Error | Mike's Fire-Roasted Pizza</h3>
+                            <p>We're sorry, there appears to be an internal error.  Click the navbar to get back to ordering great pizza from us!</p>
+                        </div>
                     </div>
                     <div class="col-sma-6">
                         <div class="content-background-container">
