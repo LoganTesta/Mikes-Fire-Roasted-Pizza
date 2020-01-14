@@ -190,7 +190,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             </div>
             <?php include 'assets/include/footer-content.php'; ?>
         </div>
-        <script type="text/javascript" src="assets/javascript/javascript-functions.js"></script>
+        <?php include 'assets/include/javascript-content.php'; ?>
         <script>
             document.addEventListener("DOMContentLoaded", function () {           
             });

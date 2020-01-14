@@ -49,7 +49,7 @@ session_start();
             </div>
             <?php include 'assets/include/footer-content.php'; ?>
         </div>
-        <script type="text/javascript" src="assets/javascript/javascript-functions.js?mod=01132020"></script>
+        <?php include 'assets/include/javascript-content.php'; ?>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 setCurrentPage(0, "mobileNav");
