@@ -195,7 +195,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             document.addEventListener("DOMContentLoaded", function () {           
             });
         </script>
-        <script type="text/babel" src="assets/javascript/main-react-functions.jsx"></script>
+        <?php include 'assets/include/main-react-content.php'; ?>
     </body>
 </html>
 

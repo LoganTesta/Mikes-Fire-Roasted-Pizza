@@ -46,14 +46,14 @@ session_start();
             </div>
             <?php include 'assets/include/footer-content.php'; ?>
         </div>
-        <script type="text/javascript" src="assets/javascript/javascript-functions.js"></script>
+        <script type="text/javascript" src="assets/javascript/javascript-functions.js?mod=01132020"></script>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 setCurrentPage(3, "mobileNav");
                 setCurrentPage(3, "desktopNav");
             });
         </script>
-        <script type="text/babel" src="assets/javascript/main-react-functions.jsx"></script>
+        <?php include 'assets/include/main-react-content.php'; ?>
     </body>
 </html>
 
