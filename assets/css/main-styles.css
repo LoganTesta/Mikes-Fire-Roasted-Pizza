@@ -317,7 +317,10 @@ a:hover { color: var(--color-2); }
 
 @media only screen and (min-width: 700px){
     
+    /*Header*/
+    .header { background: url("../images/pizza-restaurant-tables.jpg") 0% 20%/cover no-repeat; }
     /* Nav styles */
+    
     .nav__nav-link { font-size: 19px; }
     
     
@@ -337,8 +340,8 @@ a:hover { color: var(--color-2); }
     #mobileNav { display: none; }
     
     
-    /*Header*/
-    .header { min-height: 480px; }
+    /*Header*//*Header*/
+    .header { min-height: 480px; background: url("../images/pizza-restaurant-tables.jpg") 0% 18%/cover no-repeat; }
     
     .logo { position: absolute; top: 40px; left: 50px; width: 120px; height: 120px; }
     
