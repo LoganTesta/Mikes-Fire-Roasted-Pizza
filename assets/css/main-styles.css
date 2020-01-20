@@ -331,7 +331,7 @@ a:hover { color: var(--color-2); }
 @media only screen and (min-width: 1200px){
     
    /* General sitewide sections */
-    .body-wrapper { position: relative; width: 1200px; padding: 0; margin-left: auto; margin-right: auto; }
+    .inner-wrapper { width: 1200px; }
     
     #desktopNav { display: block; position: absolute; top: 25px; left: 200px; }
     #mobileNav { display: none; }
@@ -350,9 +350,6 @@ a:hover { color: var(--color-2); }
     
     /*Footer*/
     .footer { padding: 80px 15px; }
-    .footer__social { }
-    .footer__copyright { }
-    .footer-hours { }
     
     .footer__social, .footer__copyright { padding-bottom: 0px; }
     
@@ -362,14 +359,12 @@ a:hover { color: var(--color-2); }
     
     
     /*General groups styles*/
-    .order-pizza { }
     
-    .content-background-container { }
     .content__content-image { height: 400px; }
 
     .pizza-table th { display: table-cell; width: 18%; }
     .pizza-table th:nth-of-type(1) { width: 28%; }
-    .pizza-table tr td { display: table-cell;}
+    .pizza-table tr td { display: table-cell; }
     
     
     /* Nav styles */
@@ -381,6 +376,6 @@ a:hover { color: var(--color-2); }
 
 @media only screen and (min-width: 1600px){
     
-    .body-wrapper { position: relative; width: 1540px;}
+    .inner-wrapper { width: 1540px; }
     
 }

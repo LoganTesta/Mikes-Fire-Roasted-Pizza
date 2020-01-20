@@ -17,9 +17,11 @@ session_start();
         <div class="body-wrapper">
             <?php include 'assets/include/navigation-content.php'; ?>
             <header class="header">
-                <?php include 'assets/include/header-content.php'; ?>
-                <div class="subtitle-container">
-                    <h2 class="subtitle-container__sub-title">404 Error</h2>
+                <div class="inner-wrapper">
+                    <?php include 'assets/include/header-content.php'; ?>
+                    <div class="subtitle-container">
+                        <h2 class="subtitle-container__sub-title">404 Error</h2>
+                    </div>
                 </div>
             </header>
             <div class="content">
