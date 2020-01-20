@@ -25,16 +25,18 @@ session_start();
                 </div>
             </header>
             <div class="content">
-                <div class="content-row">   
-                    <div class="col-sma-6">
-                        <div class="content__text">
-                            <h3>404 Link Not Found</h3>
-                            <p>We're sorry, that link appears to be broken.  Click the navbar to get back to ordering great pizza from us!</p>
+                <div class="inner-wrapper">
+                    <div class="content-row">   
+                        <div class="col-sma-6">
+                            <div class="content__text">
+                                <h3>404 Link Not Found</h3>
+                                <p>We're sorry, that link appears to be broken.  Click the navbar to get back to ordering great pizza from us!</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-sma-6">
-                        <div class="content-background-container">
-                            <div class="content__content-image four04-one"></div>
+                        <div class="col-sma-6">
+                            <div class="content-background-container">
+                                <div class="content__content-image four04-one"></div>
+                            </div>
                         </div>
                     </div>
                 </div>

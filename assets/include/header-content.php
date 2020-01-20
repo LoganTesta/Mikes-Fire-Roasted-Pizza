@@ -1,5 +1,4 @@
 
-
 <div class="logo">
     <a href="index.php"><img src="assets/images/logo.png" alt="Mike's Fire-Roasted Pizza Logo."></a>
 </div>

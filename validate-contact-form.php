@@ -89,18 +89,24 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <div class="body-wrapper">
             <?php include 'assets/include/navigation-content.php'; ?>
             <header class="header">
-                <?php include 'assets/include/header-content.php'; ?>
-                <div class="subtitle-container">
-                    <h2 class="subtitle-container__sub-title">Sending Contact Form</h2>
+                <div class="inner-wrapper">
+                    <?php include 'assets/include/header-content.php'; ?>
+                    <div class="subtitle-container">
+                        <h2 class="subtitle-container__sub-title">Sending Contact Form</h2>
+                    </div>
                 </div>
             </header>
             <div class="content">
-                <div class="content-row">
-                    <div class="col-sma-6">
-                        <h3>Sending Message</h3>
-                        <?php if(!empty($ValidationResponse)) { echo "<p>$ValidationResponse</p>"; } ?>
-                    </div>
-                    <div class="col-sma-6">
+                <div class="inner-wrapper">
+                    <div class="content-row">
+                        <div class="col-sma-6">
+                            <h3>Sending Message</h3>
+                            <?php if (!empty($ValidationResponse)) {
+                                echo "<p>$ValidationResponse</p>";
+                            } ?>
+                        </div>
+                        <div class="col-sma-6">
+                        </div>
                     </div>
                 </div>
             </div>
