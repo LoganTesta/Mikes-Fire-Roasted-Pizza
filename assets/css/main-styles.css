@@ -282,7 +282,7 @@ a:hover { color: var(--color-2); }
 
 /***** Page specific Styles *****/
 /*Index*/
-.content__content-image--small.index-one { background: url("../images/supreme-pizza.png") 0% 0%/cover no-repeat; }
+.content__content-image--small.index-one { background: url("../images/supreme-pizza.jpg") 0% 0%/cover no-repeat; }
 .content__content-image--small.index-two { background: url("../images/whole-basil-and-cheese-pizza.jpg") 0% 0%/cover no-repeat; }
 
 

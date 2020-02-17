@@ -12,8 +12,8 @@ gulp.task('default', function () {
 var newer = require('gulp-newer');
 var imagemin = require('gulp-imagemin');
 
-var original = '/assets/images/nonmified';
-var result = '/assets/images';
+var original = 'assets/images/nonminified/';
+var result = 'assets/images/';
 
 function compressImages() {
     const output = result;
@@ -21,6 +21,6 @@ function compressImages() {
     return gulp.src(original + "/**/*")
         .pipe(newer(output))
         .pipe(imagemin({optimizationLevel: 5}))
-        .pipe(gulp.dest(out));
+        .pipe(gulp.dest(output));
 };
-exports.images = compressImages;
+exports.compressImages = compressImages;
