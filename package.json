@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/LoganTesta/Mikes-Fire-Roasted-Pizza/issues"
   },
-  "homepage": "https://github.com/LoganTesta/Mikes-Fire-Roasted-Pizza#readme"
+  "homepage": "https://github.com/LoganTesta/Mikes-Fire-Roasted-Pizza#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
 }
