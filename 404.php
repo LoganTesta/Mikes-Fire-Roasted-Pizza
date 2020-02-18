@@ -48,7 +48,6 @@ session_start();
             document.addEventListener("DOMContentLoaded", function () {
             });
         </script>   
-        <?php include 'assets/include/main-react-content.php'; ?>
     </body>
 </html>
 

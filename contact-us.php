@@ -47,8 +47,6 @@ session_start();
                 setCurrentPage(4, "desktopNav");               
             });
         </script>
-        <?php include 'assets/include/main-react-content.php'; ?>
-        <script type="text/babel" src="assets/javascript/minified/contact-react-functions.jsx?mod=01132020"></script>
     </body>
 </html>
 
