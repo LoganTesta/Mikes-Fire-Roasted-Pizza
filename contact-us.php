@@ -48,7 +48,7 @@ session_start();
             });
         </script>
         <?php include 'assets/include/main-react-content.php'; ?>
-        <script type="text/babel" src="assets/javascript/contact-react-functions.jsx?mod=01132020"></script>
+        <script type="text/babel" src="assets/javascript/minified/contact-react-functions.jsx?mod=01132020"></script>
     </body>
 </html>
 

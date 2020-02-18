@@ -1,1 +1,1 @@
-  <script type="text/javascript" src="assets/javascript/javascript-functions-min.js?mod=01142020"></script>
+  <script type="text/javascript" src="assets/javascript/minified/javascript-functions-min.js?mod=01142020"></script>
