@@ -48,3 +48,11 @@ function compressJavaScript() {
             .pipe(gulp.dest(result + 'javascript/minified'));
 }
 exports.compressJavaScript = compressJavaScript;
+
+
+
+/*Minify CSS*/
+
+
+
+

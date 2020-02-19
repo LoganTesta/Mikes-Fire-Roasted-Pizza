@@ -204,7 +204,7 @@ a:hover { color: var(--color-2); }
 .nav { background-color: rgba(255, 255, 255, 0.8); border-radius: 5px; }
 
 /*Header*/
-.header { min-height: 320px; background: url("../images/pizza-restaurant-tables.jpg") 0% 0%/cover no-repeat; }
+.header { min-height: 320px; background: url("../../images/pizza-restaurant-tables.jpg") 0% 0%/cover no-repeat; }
 
 .logo { position: relative; top: 10px; width: 80px; height: 80px; margin-left: auto; margin-right: auto; }
 
@@ -282,43 +282,43 @@ a:hover { color: var(--color-2); }
 
 /***** Page specific Styles *****/
 /*Index*/
-.content__content-image--small.index-one { background: url("../images/supreme-pizza.jpg") 0% 0%/cover no-repeat; }
-.content__content-image--small.index-two { background: url("../images/whole-basil-and-cheese-pizza.jpg") 0% 0%/cover no-repeat; }
+.content__content-image--small.index-one { background: url("../../images/supreme-pizza.jpg") 0% 0%/cover no-repeat; }
+.content__content-image--small.index-two { background: url("../../images/whole-basil-and-cheese-pizza.jpg") 0% 0%/cover no-repeat; }
 
 
 /*About Us*/
-.about-one { background: url("../images/making-pizza.jpg") 0% 0%/cover no-repeat; }
+.about-one { background: url("../../images/making-pizza.jpg") 0% 0%/cover no-repeat; }
 
 
 /* Our Pizzas */
-.content__content-image--small.our-pizzas-one { background: url("../images/mushroom-basil-olive-pizza-close-up.jpg") 0% 0%/cover no-repeat; }
-.content__content-image--small.our-pizzas-two { background: url("../images/whole-pepperoni-pizza.jpg") 0% 0%/cover no-repeat; }
+.content__content-image--small.our-pizzas-one { background: url("../../images/mushroom-basil-olive-pizza-close-up.jpg") 0% 0%/cover no-repeat; }
+.content__content-image--small.our-pizzas-two { background: url("../../images/whole-pepperoni-pizza.jpg") 0% 0%/cover no-repeat; }
 
 
 /*Locations*/
-.locations-one { background: url("../images/outdoor-pizza-restaurant.jpg") 0% 0%/cover no-repeat; }
+.locations-one { background: url("../../images/outdoor-pizza-restaurant.jpg") 0% 0%/cover no-repeat; }
 
 
 /*Contact Us*/
-.contact-one { background: url("../images/mushroom-basil-olive-pizza-close-up.jpg") 0% 0%/cover no-repeat; }
+.contact-one { background: url("../../images/mushroom-basil-olive-pizza-close-up.jpg") 0% 0%/cover no-repeat; }
 
 .contact-form { padding: 20px; }
 .user-name { padding-left: 50px; }
 
 
 /*404*/
-.four04-one { background: url("../images/empty-pizza.jpg") 0% 0%/cover no-repeat; }
+.four04-one { background: url("../../images/empty-pizza.jpg") 0% 0%/cover no-repeat; }
 
 
 /*500*/
-.five00-one { background: url("../images/empty-pizza.jpg") 0% 0%/cover no-repeat; }
+.five00-one { background: url("../../images/empty-pizza.jpg") 0% 0%/cover no-repeat; }
 
 
 
 @media only screen and (min-width: 700px){
     
     /*Header*/
-    .header { background: url("../images/pizza-restaurant-tables.jpg") 0% 20%/cover no-repeat; }
+    .header { background: url("../../images/pizza-restaurant-tables.jpg") 0% 20%/cover no-repeat; }
     /* Nav styles */
     
     .nav__nav-link { font-size: 19px; }
@@ -341,7 +341,7 @@ a:hover { color: var(--color-2); }
     
     
     /*Header*//*Header*/
-    .header { min-height: 480px; background: url("../images/pizza-restaurant-tables.jpg") 0% 18%/cover no-repeat; }
+    .header { min-height: 480px; background: url("../../images/pizza-restaurant-tables.jpg") 0% 18%/cover no-repeat; }
     
     .logo { position: absolute; top: 40px; left: 50px; width: 120px; height: 120px; }
     
