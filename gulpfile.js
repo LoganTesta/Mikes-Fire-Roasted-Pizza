@@ -52,7 +52,11 @@ exports.compressJavaScript = compressJavaScript;
 
 
 /*Minify CSS*/
+var cleanCSS = require('gulp-clean-css');
 
-
-
-
+function minifyCSS() {
+    return gulp.src(src + 'css/*.css')
+            .pipe(cleanCSS({compatability: 'ie8'}))
+            .pipe(gulp.dest(result + 'css/minified/'));
+}
+exports.minifyCSS = minifyCSS;
