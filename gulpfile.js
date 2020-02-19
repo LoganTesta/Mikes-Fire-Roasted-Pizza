@@ -60,3 +60,8 @@ function minifyCSS() {
             .pipe(gulp.dest(result + 'css/minified/'));
 }
 exports.minifyCSS = minifyCSS;
+
+
+
+/* Call gulp build to run several tasks shown below.*/
+exports.build = gulp.parallel(exports.compressImages, exports.compressJavaScript, exports.minifyCSS);
