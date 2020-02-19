@@ -38,10 +38,10 @@ const
         sourcemaps = devBuild ? require('gulp-sourcemaps') : null;
 
 function compressJavaScript() {
-    return gulp.orginal(original + 'javascript/base/**/*')
+    return gulp.src(original + 'javascript/base/**/*')
             .pipe(sourcemaps ? sourcemaps.init() : noop())
             .pipe(deporder())
-            .pipe(concat('main-javascript.js'))
+            .pipe(concat('main-javascript-min.js'))
             .pipe(stripdebug ? stripdebug() : noop())
             .pipe(terser())
             .pipe(sourcemaps ? sourcemaps.write() : noop())

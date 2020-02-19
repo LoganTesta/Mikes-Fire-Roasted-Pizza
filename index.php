@@ -60,6 +60,7 @@ session_start();
                 setCurrentPage(0, "desktopNav");
             });
         </script>
+        <?php include 'assets/include/main-react-content.php'; ?>
     </body>
 </html>
 
