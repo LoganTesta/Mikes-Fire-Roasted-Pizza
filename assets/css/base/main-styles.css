@@ -224,7 +224,7 @@ a:hover { color: var(--color-2); }
 .nav__item { display: block; font-size: 18px; }
 .nav__item:last-of-type { }
 .nav__nav-link { font-size: 18px; font-weight: bold; transition: 0.2s; }
-.nav .current-page:link, .nav .current-page:visited { color: var(--color-3); text-decoration: underline; transition: 0.2s;}
+.nav .current-page:link, .nav .current-page:visited { color: var(--color-3); text-decoration: underline; transition: 0.2s; }
 .nav .current-page:hover { color: var(--color-2); text-decoration: underline; transition: 0.2s; }
 .nav__nav-link:hover { color: var(--color-2); text-decoration: underline; transition: 0.2s; }
 

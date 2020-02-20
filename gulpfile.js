@@ -6,9 +6,9 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 
 
-gulp.task('default', function () {
-
-});
+//gulp.task('default', function () {
+//
+//});
 
 var newer = require('gulp-newer');
 var imagemin = require('gulp-imagemin');
@@ -17,12 +17,12 @@ var original = 'assets/';
 var result = 'assets/';
 
 function compressImages() {
-    const output = "images/" + result;
+    const output = result;
 
-    return gulp.src(original + "images/nonminified//**/*")
+    return gulp.src(original + 'images/nonminified/**/*')
         .pipe(newer(output))
         .pipe(imagemin({optimizationLevel: 5}))
-        .pipe(gulp.dest(output));
+        .pipe(gulp.dest(output + 'images/'));
 };
 exports.compressImages = compressImages;
 
@@ -65,3 +65,13 @@ exports.minifyCSS = minifyCSS;
 
 /* Call gulp build to run several tasks shown below.*/
 exports.build = gulp.parallel(exports.compressImages, exports.compressJavaScript, exports.minifyCSS);
+
+
+/*Another option: type gulp in the proper command line directory and gulp will watch automatically for any changes to the following files.*/
+function watch(done){  
+    gulp.watch(original + 'images/nonminified/**/*', compressImages);
+    gulp.watch(original + 'javascript/base/**/*', compressJavaScript);
+    gulp.watch(original + 'css/base/*.css', minifyCSS); 
+}
+exports.watch = watch;
+exports.default = gulp.series(exports.build, exports.watch);
