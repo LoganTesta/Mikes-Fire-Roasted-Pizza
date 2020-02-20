@@ -58,6 +58,7 @@ session_start();
                 setCurrentPage(2, "desktopNav");
             });
         </script>
+        <?php include 'assets/include/main-react-content.php'; ?>
     </body>
 </html>
 
