@@ -190,8 +190,8 @@ Also used
 
 h1, h2, h3 { font-weight: bold; }
 h1 { font-family: 'Lato', sans-serif; }
-h2 { }
-h3 { padding: 0 0 15px 0; color: var(--color-1); }
+h2 { font-size: 22px; }
+h3 { font-size: 20px; padding: 0 0 15px 0; color: var(--color-1); }
 h3 { }
 input, textarea, select { border: 1px solid var(--color-6); color: var(--color-7); transition: 0.2s; }
 input:focus, textarea:focus, select:focus { box-shadow: 0 0 3px 5px var(--color-6); transition: 0.2s; }
@@ -332,6 +332,9 @@ a:hover { color: var(--color-2); }
 
 
 @media only screen and (min-width: 1200px){
+    
+    h2 { font-size: 26px; }
+    h3 { font-size: 24px; }
     
    /* General sitewide sections */
     .inner-wrapper { width: 1200px; }
