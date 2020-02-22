@@ -163,13 +163,13 @@ class PizzaOrderContent extends React.Component {
                 <form className="form pizza-order" name="pizzaOrder" method="post" action="validate-pizza-order-form.php">       
                     <input type="hidden" id="orderTotalCost" name="orderTotalCost" value={this.state.orderTotalCost} />
                     <div className="form__input-container">
-                        <label className="form__label">** Number of Pizzas</label>
-                        <input className="form__input" name="numberOfPizzasTotal" type="text" onChange={this.adjustPizzaOrder} />
+                        <label className="form__label" for="numberOfPizzasTotal">** Number of Pizzas</label>
+                        <input id="numberOfPizzasTotal" className="form__input" name="numberOfPizzasTotal" type="text" onChange={this.adjustPizzaOrder} />
                         <div className="clear-both"></div>
                     </div>
                     <div className="form__input-container">
-                        <label className="form__label">** Size</label>
-                        <select className="form__input" name="sizeOfPizza" onChange={this.adjustPizzaOrder}>
+                        <label className="form__label" for="sizeOfPizza">** Size</label>
+                        <select id="sizeOfPizza" className="form__input" name="sizeOfPizza" onChange={this.adjustPizzaOrder}>
                             <option value="" label=" "></option>
                             <option value="Personal">Personal: 6"</option>
                             <option value="Small">Small: 12"</option>
@@ -179,8 +179,8 @@ class PizzaOrderContent extends React.Component {
                         <div className="clear-both"></div>
                     </div>
                     <div className="form__input-container">
-                        <label className="form__label">** Choose Type of Pizza</label>
-                        <select className="form__input" name="typeOfPizza" onChange={this.adjustPizzaOrder}>
+                        <label className="form__label" for="typeOfPizza">** Choose Type of Pizza</label>
+                        <select id="typeOfPizza" className="form__input" name="typeOfPizza" onChange={this.adjustPizzaOrder}>
                             <option value="" label=" "></option>
                             <option value="Cheese">Cheese</option>
                             <option value="Veggie">Veggie</option>
@@ -191,8 +191,8 @@ class PizzaOrderContent extends React.Component {
                         <div className="clear-both"></div>
                     </div>
                     <div className="form__input-container">
-                        <label className="form__label">** Store Pickup</label>
-                        <select className="form__input" name="storePickup" onChange={this.adjustPizzaOrder}>
+                        <label className="form__label" for="storePickup">** Store Pickup</label>
+                        <select id="storePickup" className="form__input" name="storePickup" onChange={this.adjustPizzaOrder}>
                             <option value="" label=" "></option>
                             <option value="SE Portland">SE Portland</option>
                             <option value="Happy Valley">Happy Valley</option>
@@ -202,23 +202,23 @@ class PizzaOrderContent extends React.Component {
                         <div className="clear-both"></div>
                     </div>
                     <div className="form__input-container">
-                        <label className="form__label">** Your Name</label>
-                        <input className="form__input" name="orderName" type="text" onChange={this.adjustPizzaOrder} />
+                        <label className="form__label" for="orderName">** Your Name</label>
+                        <input id="orderName" className="form__input" name="orderName" type="text" onChange={this.adjustPizzaOrder} />
                         <div className="clear-both"></div>
                     </div>
                     <div className="form__input-container">
-                        <label className="form__label">** Your Email</label>
-                        <input className="form__input" name="orderEmail" type="email" onChange={this.adjustPizzaOrder} />
+                        <label className="form__label" for="orderEmail">** Your Email</label>
+                        <input id="orderEmail" className="form__input" name="orderEmail" type="email" onChange={this.adjustPizzaOrder} />
                         <div className="clear-both"></div>
                     </div>
                     <div className="form__input-container">
-                        <label className="form__label">** Phone (10 digits, no dashes)</label>
-                        <input className="form__input" name="orderPhone" type="tel" onChange={this.adjustPizzaOrder} />
+                        <label className="form__label" for="orderPhone">** Phone (10 digits, no dashes)</label>
+                        <input id="orderPhone" className="form__input" name="orderPhone" type="tel" onChange={this.adjustPizzaOrder} />
                         <div className="clear-both"></div>
                     </div>
                     <div className="form__input-container">
-                        <label className="form__label">Comments</label>
-                        <textarea className="form__input" name="orderComments" onChange={this.adjustPizzaOrder} />
+                        <label className="form__label" for="orderComments">Comments</label>
+                        <textarea id="orderComments" className="form__input" name="orderComments" onChange={this.adjustPizzaOrder} />
                         <div className="clear-both"></div>
                     </div>
         

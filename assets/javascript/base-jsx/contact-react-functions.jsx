@@ -56,23 +56,23 @@ class ContactFormContent extends React.Component {
                 <div>** Required</div>
                 <form className="form contact-form" name="contactForm" method="post" action="validate-contact-form.php" onMouseOver={this.checkValidity}>
                     <div className="form__input-container">
-                        <label className="form__label">** Your Name</label>
-                        <input className="form__input" name="userName" type="text" onChange={this.updateUserProvidedInfo} />
+                        <label className="form__label" for="userName">** Your Name</label>
+                        <input id="userName" className="form__input" name="userName" type="text" onChange={this.updateUserProvidedInfo} />
                         <div className="clear-both"></div>
                     </div>
                     <div className="form__input-container">
-                        <label className="form__label">** Your Email</label>
-                        <input className="form__input" name="userEmail" type="email" onChange={this.updateUserProvidedInfo} />
+                        <label className="form__label" for="userEmail">** Your Email</label>
+                        <input id="userEmail" className="form__input" name="userEmail" type="email" onChange={this.updateUserProvidedInfo} />
                         <div className="clear-both"></div>
                     </div>
                     <div className="form__input-container">
-                        <label className="form__label">Subject</label>
-                        <input className="form__input" name="userSubject" type="text" onChange={this.updateUserProvidedInfo} />
+                        <label className="form__label" for="userSubject">Subject</label>
+                        <input id="userSubject" className="form__input" name="userSubject" type="text" onChange={this.updateUserProvidedInfo} />
                         <div className="clear-both"></div>
                     </div>
                     <div className="form__input-container">
-                        <label className="form__label">** Comments</label>
-                        <textarea className="form__input" name="userComments" onChange={this.updateUserProvidedInfo} />
+                        <label className="form__label" for="userComments">** Comments</label>
+                        <textarea id="userComments" className="form__input" name="userComments" onChange={this.updateUserProvidedInfo} />
                         <div className="clear-both"></div>
                     </div>
                     <div className="form__input-container">
