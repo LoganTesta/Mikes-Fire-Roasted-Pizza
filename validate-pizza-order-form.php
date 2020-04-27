@@ -134,14 +134,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($PassedValidation) {
         /* Create the e-mail body. */
         $Body = "";
-        $Body .= "Customer Name: " . $UserName . "\n";
-        $Body .= "Customer Email: " . $UserEmail . "\n";
-        $Body .= "Customer Phone: " . $UserPhone . "\n";
-        $Body .= "Subject: " . $Subject . "\n";
-        $Body .= "Order: " . $NumberOfPizzasTotal . " " . $SizeOfPizza . " " . $TypeOfPizza . " pizza/pizzas.\n";
-        $Body .= "Location: " . $StorePickup . "\n";
-        $Body .= "User Comments: " . $UserComments . "\n";
-        $Body .= "Order Total: $" . $OrderTotalCost . "\n";
+        $Body .= "<strong>Customer Name:</strong> " . $UserName . "\n";
+        $Body .= "<strong>Customer Email:</strong> " . $UserEmail . "\n";
+        $Body .= "<strong>Customer Phone:</strong> " . $UserPhone . "\n";
+        $Body .= "<strong>Subject:</strong> " . $Subject . "\n";
+        $Body .= "<strong>Order:</strong> " . $NumberOfPizzasTotal . " " . $SizeOfPizza . " " . $TypeOfPizza . " pizza/pizzas.\n";
+        $Body .= "<strong>Location:</strong> " . $StorePickup . "\n";
+        $Body .= "<strong>User Comments:</strong> " . $UserComments . "\n";
+        $Body .= "<strong>Order Total:</strong> $" . $OrderTotalCost . "\n";
 
         /* Send the e-mail. */
         $SuccessfulSubmission = mail($SendEmailTo, $Subject, $Body, "From: <$UserEmail>");
