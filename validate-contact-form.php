@@ -57,15 +57,22 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     if ($PassedValidation) {
+        
+        /*Set the headers*/
+        $Headers = "";
+        $Headers .= "From: <$UserEmail>\r\n";
+        $Headers .= "MIME-Version: 1.0\r\n";
+        $Headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+        
         /* Create the e-mail body. */
         $Body = "";
-        $Body .= "<strong>User Name:</strong> " . $UserName . "\n";
-        $Body .= "<strong>User Email:</strong> " . $UserEmail . "\n";
-        $Body .= "<strong>Subject:</strong> " . $UserSubject . "\n";
-        $Body .= "<strong>User Comments:</strong> " . $UserComments . "\n";
+        $Body .= "<strong>User Name:</strong> " . $UserName . "<br />";
+        $Body .= "<strong>User Email:</strong> " . $UserEmail . "<br />";
+        $Body .= "<strong>Subject:</strong> " . $UserSubject . "<br />";
+        $Body .= "<strong>User Comments:</strong> " . $UserComments . "<br />";
 
         /* Send the e-mail. */
-        $SuccessfulSubmission = mail($SendEmailTo, "Mike's Fire-Roasted Pizza: " . $UserSubject, $Body, "From: <$UserEmail>");
+        $SuccessfulSubmission = mail($SendEmailTo, "Mike's Fire-Roasted Pizza: " . $UserSubject, $Body, $Headers);
         if ($SuccessfulSubmission) {
             $ValidationResponse .= "<p>" . $UserName . ", your message was successfully submitted.  Thanks for contacting us!</p>";
         } else if ($SuccessfulSubmission === false) {

@@ -132,19 +132,26 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     if ($PassedValidation) {
+        
+        /*Set the headers*/
+        $Headers = "";
+        $Headers .= "From: <$UserEmail>\r\n";
+        $Headers .= "MIME-Version: 1.0\r\n";
+        $Headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+        
         /* Create the e-mail body. */
         $Body = "";
-        $Body .= "<strong>Customer Name:</strong> " . $UserName . "\n";
-        $Body .= "<strong>Customer Email:</strong> " . $UserEmail . "\n";
-        $Body .= "<strong>Customer Phone:</strong> " . $UserPhone . "\n";
-        $Body .= "<strong>Subject:</strong> " . $Subject . "\n";
-        $Body .= "<strong>Order:</strong> " . $NumberOfPizzasTotal . " " . $SizeOfPizza . " " . $TypeOfPizza . " pizza/pizzas.\n";
-        $Body .= "<strong>Location:</strong> " . $StorePickup . "\n";
-        $Body .= "<strong>User Comments:</strong> " . $UserComments . "\n";
-        $Body .= "<strong>Order Total:</strong> $" . $OrderTotalCost . "\n";
+        $Body .= "<strong>Customer Name:</strong> " . $UserName . "<br />";
+        $Body .= "<strong>Customer Email:</strong> " . $UserEmail . "<br />";
+        $Body .= "<strong>Customer Phone:</strong> " . $UserPhone . "<br />";
+        $Body .= "<strong>Subject:</strong> " . $Subject . "<br />";
+        $Body .= "<strong>Order:</strong> " . $NumberOfPizzasTotal . " " . $SizeOfPizza . " " . $TypeOfPizza . " pizza/pizzas.<br />";
+        $Body .= "<strong>Location:</strong> " . $StorePickup . "<br />";
+        $Body .= "<strong>User Comments:</strong> " . $UserComments . "<br />";
+        $Body .= "<strong>Order Total:</strong> $" . $OrderTotalCost . "<br />";
 
         /* Send the e-mail. */
-        $SuccessfulSubmission = mail($SendEmailTo, $Subject, $Body, "From: <$UserEmail>");
+        $SuccessfulSubmission = mail($SendEmailTo, $Subject, $Body, $Headers);
         if ($SuccessfulSubmission) {
             $ValidationResponse .= "Success!<br />";
             $ValidationResponse .= "Thank you <strong>" . $UserName . "</strong>.<br />";
