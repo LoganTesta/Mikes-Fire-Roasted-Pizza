@@ -24,8 +24,8 @@ session_start();
                     </div>
                 </div>
             </header>
-            <div class="content">
-                <div class="inner-wrapper">
+            <div class="inner-wrapper">
+                <div class="content">
                     <div class="content-row">   
                         <div class="col-sma-6">
                             <div class="content__text">

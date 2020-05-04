@@ -187,8 +187,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     </div>
                 </div>
             </header>
-            <div class="content">
-                <div class="inner-wrapper">
+            <div class="inner-wrapper">
+                <div class="content">
                     <div class="content-row">
                         <div class="col-sma-6">
                             <h3>Sending Order</h3>
