@@ -153,7 +153,7 @@ class PizzaOrderContent extends React.Component {
 
 
         return <div className="order-pizza" onMouseOver={this.checkValidity}>
-            <div className="order-pizza__header"><h3>Order a Pizza!  Pick it up in 30 Minutes!</h3></div>
+            <h3 className="order-pizza__header">Order a Pizza!  Pick it up in 30 Minutes!</h3>
             <div><p>Your Order: <strong>{this.state.orderTextOutput}</strong></p></div>
             <div className="order-total" name="orderTotalCost">Total: ${this.state.orderTotalCost}</div>
         

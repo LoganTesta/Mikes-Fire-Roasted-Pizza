@@ -266,6 +266,7 @@ a:hover { color: var(--color-2); }
 
 .order-pizza { padding: 20px; margin-top: 20px; margin-bottom: 20px; border: 10px solid var(--color-2); border-radius: 30px; text-align: left;
               background-color: var(--color-5); color: var(--color-1); }
+.order-pizza__header { display: block; }
 .order-total { padding-bottom: 15px; font-size: 20px; font-weight: bold; }
 
 .content-background-container { }
@@ -371,6 +372,8 @@ a:hover { color: var(--color-2); }
     
     /*General groups styles*/
     .content__content-image { height: 400px; }
+    
+    .order-pizza__header { font-size: 28px; }
 
     .pizza-table th { display: table-cell; width: 18%; }
     .pizza-table th:nth-of-type(1) { width: 28%; }
@@ -385,7 +388,7 @@ a:hover { color: var(--color-2); }
     
     
     /*Index*/
-    .page-index .pizza-order-content { opacity: 0.96; position: absolute; top: -320px; right: 0; width: 48%; max-width: 740px; }
+    .page-index .pizza-order-content { opacity: 0.96; position: absolute; top: -220px; right: 0; width: 48%; max-width: 740px; }
     
 }
 
@@ -393,6 +396,10 @@ a:hover { color: var(--color-2); }
     
     /*General sitewide sections*/
     .inner-wrapper { width: 1540px; }
+    
+    
+    /*General groups styles*/
+    .order-pizza__header { font-size: 32px; }
     
     
     /*Index page*/
