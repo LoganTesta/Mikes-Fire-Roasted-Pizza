@@ -285,12 +285,14 @@ a:hover { color: var(--color-2); }
 .content__content-image--small.index-one { background: url("../../images/supreme-pizza.jpg") 0% 0%/cover no-repeat; }
 .content__content-image--small.index-two { background: url("../../images/whole-basil-and-cheese-pizza.jpg") 0% 0%/cover no-repeat; }
 
+.page-index .pizza-order-content { }
+
 
 /*About Us*/
 .about-one { background: url("../../images/making-pizza.jpg") 0% 0%/cover no-repeat; }
 
 
-/* Our Pizzas */
+/*Our Pizzas*/
 .content__content-image--small.our-pizzas-one { background: url("../../images/mushroom-basil-olive-pizza-close-up.jpg") 0% 0%/cover no-repeat; }
 .content__content-image--small.our-pizzas-two { background: url("../../images/whole-pepperoni-pizza.jpg") 0% 0%/cover no-repeat; }
 
@@ -327,6 +329,9 @@ a:hover { color: var(--color-2); }
     /*General sections*/
     .form__label { float: left; width: 35%; padding-right: 10px; padding-bottom: 0; }
     .form__input { float: left; width: 65%; }
+    
+    /*Index*/
+    .page-index .pizza-order-content { }
 }
 
 
@@ -336,15 +341,15 @@ a:hover { color: var(--color-2); }
     h2 { font-size: 26px; }
     h3 { font-size: 24px; }
     
-   /* General sitewide sections */
+    /*General sitewide sections*/
     .inner-wrapper { width: 1200px; }
     
     #desktopNav { display: block; position: absolute; top: 25px; left: 200px; }
     #mobileNav { display: none; }
     
     
-    /*Header*//*Header*/
-    .header { min-height: 480px; background: url("../../images/pizza-restaurant-tables.jpg") 0% 18%/cover no-repeat; }
+    /*Header*/
+    .header { min-height: 600px; background: url("../../images/pizza-restaurant-tables.jpg") 0% 18%/cover no-repeat; }
     
     .logo { position: absolute; top: 40px; left: 50px; width: 120px; height: 120px; }
     
@@ -365,7 +370,6 @@ a:hover { color: var(--color-2); }
     
     
     /*General groups styles*/
-    
     .content__content-image { height: 400px; }
 
     .pizza-table th { display: table-cell; width: 18%; }
@@ -378,10 +382,20 @@ a:hover { color: var(--color-2); }
     .nav__item { display: block; padding-left: 10px; padding-right: 10px; padding-bottom: 15px; text-align: center; }  
     .nav__item:last-of-type { padding-bottom: 0; }
     .nav__item, .nav__item:last-of-type { display: inline-block; padding-left: 37px; padding-right: 37px; padding-bottom: 0; text-align: left; }    
+    
+    
+    /*Index*/
+    .page-index .pizza-order-content { opacity: 0.96; position: absolute; top: -320px; right: 0; width: 48%; max-width: 740px; }
+    
 }
 
 @media only screen and (min-width: 1600px){
     
+    /*General sitewide sections*/
     .inner-wrapper { width: 1540px; }
+    
+    
+    /*Index page*/
+    .page-index .pizza-order-content { width: 50%; }
     
 }
