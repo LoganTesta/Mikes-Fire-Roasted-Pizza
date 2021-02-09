@@ -13,7 +13,7 @@ session_start();
         <title>404 | Mike's Fire-Roasted Pizza</title>
         <?php include 'assets/include/document-head-components.php'; ?>
     </head>
-    <body>
+    <body class="page-404">
         <div class="body-wrapper">
             <?php include 'assets/include/navigation-content.php'; ?>
             <header class="header">

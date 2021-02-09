@@ -200,7 +200,7 @@ a:hover { color: var(--color-2); }
 /*Nav*/
 #desktopNav { display: none; }
 #mobileNav { display: block; }
-.nav { background-color: rgba(255, 255, 255, 0.8); border-radius: 5px; }
+.nav { background-color: rgba(255, 255, 255, 0.85); border-radius: 5px; }
 
 /*Header*/
 .header { min-height: 320px; background: url("../../images/pizza-restaurant-tables.jpg") 0% 0%/cover no-repeat; }
@@ -209,12 +209,12 @@ a:hover { color: var(--color-2); }
 
 .main-title-container { position: relative; top: 30px; left: 0px; width: 187px;
                         margin-left: auto; margin-right: auto; border-radius: 10px; text-align: center; cursor: pointer;
-                        background-color: rgba(255, 255, 255, 0.8); }
+                        background-color: rgba(255, 255, 255, 0.85); }
 .main-title-container .main-title-container__title { display: inline-block; width: 187px; padding: 8px 6px; font-size: 28px; font-family: 'Lato', 
                                   sans-serif; font-weight: bold; color: var(--color-1); }
 
 .subtitle-container { position: relative; top: 40px; width: 100%; max-width: 270px; padding: 6px 6px; margin-left: auto; margin-right: auto; 
-    border-radius: 10px; text-align: center; background-color: rgba(255, 255, 255, 0.8); }
+    border-radius: 10px; text-align: center; background-color: rgba(255, 255, 255, 0.85); }
 .subtitle-container__sub-title { padding: 0; color: var(--color-3); }
 
 
@@ -227,7 +227,7 @@ a:hover { color: var(--color-2); }
 .nav .current-page:hover { color: var(--color-2); text-decoration: underline; transition: 0.2s; }
 .nav__nav-link:hover { color: var(--color-2); text-decoration: underline; transition: 0.2s; }
 
-#mobileNav .nav__item { position: absolute; padding: 6px 5px; border-radius: 5px; background-color: rgba(255, 255, 255, 0.8); }
+#mobileNav .nav__item { position: absolute; padding: 6px 5px; border-radius: 5px; background-color: rgba(255, 255, 255, 0.85); }
 #mobileNav .nav__item:nth-of-type(1) { display: none;  top: 40px; left: 10px; } 
 #mobileNav .nav__item:nth-of-type(2) { top: 40px; left: 10px; } 
 #mobileNav .nav__item:nth-of-type(3) { top: 275px; left: 10px; } 

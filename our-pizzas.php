@@ -14,7 +14,7 @@ session_start();
         <title>Our Pizzas | Mike's Fire-Roasted Pizza</title>
             <?php include 'assets/include/document-head-components.php'; ?>
     </head>
-    <body>
+    <body class="our-pizzas">
         <div class="body-wrapper">
             <?php include 'assets/include/navigation-content.php'; ?>
             <header class="header">

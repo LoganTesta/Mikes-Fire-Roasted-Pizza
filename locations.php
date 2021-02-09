@@ -13,7 +13,7 @@ session_start();
         <title>Locations | Mike's Fire-Roasted Pizza</title>
         <?php include 'assets/include/document-head-components.php'; ?>
     </head>
-    <body>
+    <body class="page-locations">
         <div class="body-wrapper">
             <?php include 'assets/include/navigation-content.php'; ?>
             <header class="header">
