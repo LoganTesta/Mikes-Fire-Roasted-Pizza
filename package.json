@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/LoganTesta/Mikes-Fire-Roasted-Pizza#readme",
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-deporder": "^1.2.0",
     "gulp-sourcemaps": "^2.6.5",
@@ -28,7 +28,7 @@
     "acorn": "^7.1.1",
     "gulp-clean-css": "^4.2.0",
     "gulp-cssnano": "^1.1.0",
-    "gulp-imagemin": "^4.1.0",
+    "gulp-imagemin": "^8.0.0",
     "gulp-newer": "^1.4.0",
     "gulp-noop": "^1.0.0",
     "gulp-sass": "^5.0.0",
