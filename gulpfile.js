@@ -1,4 +1,7 @@
 
+/*Call gulp build to run several tasks shown below. Type gulp in the command line in the project's main directory and gulp will watch automatically 
+/*for any changes to the following files.*/
+
 var gulp = require('gulp');
 var csssnano = require('gulp-cssnano');
 var sass = require('gulp-sass');
@@ -11,7 +14,7 @@ var uglify = require('gulp-uglify');
 //});
 
 var newer = require('gulp-newer');
-var imagemin = require('gulp-imagemin');
+//var imagemin = require('gulp-imagemin');
 
 var original = 'assets/';
 var result = 'assets/';
@@ -21,7 +24,7 @@ function compressImages() {
 
     return gulp.src(original + 'images/nonminified/**/*')
         .pipe(newer(output))
-        .pipe(imagemin({optimizationLevel: 5}))
+        //.pipe(imagemin({optimizationLevel: 5}))
         .pipe(gulp.dest(output + 'images/'));
 };
 exports.compressImages = compressImages;
