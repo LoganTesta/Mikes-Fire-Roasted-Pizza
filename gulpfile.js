@@ -9,12 +9,8 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 
 
-//gulp.task('default', function () {
-//
-//});
-
 var newer = require('gulp-newer');
-//var imagemin = require('gulp-imagemin');
+var imagemin = require('gulp-imagemin');
 
 var original = 'assets/';
 var result = 'assets/';
@@ -24,7 +20,7 @@ function compressImages() {
 
     return gulp.src(original + 'images/nonminified/**/*')
         .pipe(newer(output))
-        //.pipe(imagemin({optimizationLevel: 5}))
+        .pipe(imagemin({optimizationLevel: 5}))
         .pipe(gulp.dest(output + 'images/'));
 };
 exports.compressImages = compressImages;
