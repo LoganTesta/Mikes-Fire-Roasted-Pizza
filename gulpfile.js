@@ -55,7 +55,9 @@ var cleanCSS = require('gulp-clean-css');
 
 function minifyCSS() {
     return gulp.src(original + 'css/base/*.css')
+            .pipe(sourcemaps.init())
             .pipe(cleanCSS({compatability: 'ie8'}))
+            .pipe(sourcemaps.write('../minified/'))
             .pipe(gulp.dest(result + 'css/minified/'));
 }
 exports.minifyCSS = minifyCSS;
