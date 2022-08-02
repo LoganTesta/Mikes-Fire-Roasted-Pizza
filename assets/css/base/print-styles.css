@@ -9,3 +9,7 @@
 
 
 /***############### Website Specific Styles. ***/
+
+/* Prevent mid-item splitting onto two pages if possible*/
+.content__content-image { break-inside: avoid; page-break-inside: avoid; /*Older version*/ }
+

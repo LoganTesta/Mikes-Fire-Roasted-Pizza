@@ -11,5 +11,5 @@
  <![endif]-->
 <link rel="icon" type="image/png" href="assets/images/favicon.png" />
 
-<link rel="stylesheet" type="text/css" href="assets/css/minified/main-styles.css?mod=04232022V2" />
-<link rel="stylesheet" type="text/css" href="assets/css/minified/print-styles.css?mod=02192020" media="print" />
+<link rel="stylesheet" type="text/css" href="assets/css/minified/main-styles.css?mod=08012022" />
+<link rel="stylesheet" type="text/css" href="assets/css/minified/print-styles.css?mod=08012022" media="print" />
