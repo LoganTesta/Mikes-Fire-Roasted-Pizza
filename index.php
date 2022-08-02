@@ -15,9 +15,9 @@ session_start();
     </head>
     <body class="page-index">
         <div class="body-wrapper">
-            <?php include 'assets/include/navigation-content.php'; ?>
             <header class="header">
                 <div class="inner-wrapper">
+                    <?php include 'assets/include/navigation-content.php'; ?>
                     <?php include 'assets/include/header-content.php'; ?>
                     <div class="subtitle-container">
                         <h2 class="subtitle-container__sub-title">Fresh Custom Pizza For the Whole Party!</h2>
