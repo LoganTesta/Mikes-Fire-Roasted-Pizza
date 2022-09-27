@@ -355,7 +355,7 @@ a:hover { color: var(--color-2); }
 
 
     /*Header*/
-    .header { min-height: 650px; background: url("../../images/pizza-restaurant-tables.jpg") 0% 18%/cover no-repeat; }
+    .header { min-height: 480px; background: url("../../images/pizza-restaurant-tables.jpg") 0% 18%/cover no-repeat; }
     
     .logo { position: absolute; top: 40px; left: 50px; width: 120px; height: 120px; }
     
@@ -397,7 +397,7 @@ a:hover { color: var(--color-2); }
     
     
     /*Index*/
-    .page-index .pizza-order-content { opacity: 0.96; position: absolute; top: -550px; right: 0; width: 48%; max-width: 740px; }
+    .page-index .pizza-order-content { opacity: 0.96; position: absolute; top: -380px; right: 0; width: 48%; max-width: 740px; }
     
 }
 
@@ -408,6 +408,8 @@ a:hover { color: var(--color-2); }
     
     
     /*Header*/
+    .header { min-height: 650px; }
+    
     .main-title-container { left: 240px; top: 140px; }
     
     .subtitle-container { left: 240px; top: 220px; }
