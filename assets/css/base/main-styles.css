@@ -323,17 +323,21 @@ a:hover { color: var(--color-2); }
     
     /*Header*/
     .header { background: url("../../images/pizza-restaurant-tables.jpg") 0% 20%/cover no-repeat; }
+    
+    
     /* Nav styles */
     
     .nav__nav-link { font-size: 19px; }
     
     
     /*General sections*/
-    .form__label { float: left; width: 35%; padding-right: 10px; padding-bottom: 0; }
-    .form__input { float: left; width: 65%; }
+    .form__label { float: left; padding-right: 10px; padding-bottom: 0; }
+    .form__input { float: left; }
+    
     
     /*Index*/
     .page-index .pizza-order-content { }
+    
 }
 
 
@@ -348,8 +352,8 @@ a:hover { color: var(--color-2); }
     
     #desktopNav { display: block; position: absolute; top: 25px; left: 200px; }
     #mobileNav { display: none; }
-    
-    
+
+
     /*Header*/
     .header { min-height: 650px; background: url("../../images/pizza-restaurant-tables.jpg") 0% 18%/cover no-repeat; }
     
@@ -369,6 +373,10 @@ a:hover { color: var(--color-2); }
     
     /*General classes*/
     .content__content-image--small { height: 240px; }
+    
+    
+    /*General sections*/
+    .form__input-container { float: left; width: 50%; padding-left: 15px; padding-right: 15px; }
     
     
     /*General groups styles*/
