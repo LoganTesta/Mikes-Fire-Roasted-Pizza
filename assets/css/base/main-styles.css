@@ -208,7 +208,7 @@ a:hover { color: var(--color-2); }
 
 .logo { position: relative; top: 10px; width: 80px; height: 80px; margin-left: auto; margin-right: auto; }
 
-.main-title-container { position: relative; top: 30px; left: 0px; width: 187px;
+.main-title-container { position: relative; left: 0px; top: 30px; width: 187px;
                         margin-left: auto; margin-right: auto; border-radius: 10px; text-align: center; cursor: pointer;
                         background-color: rgba(255, 255, 255, 0.85); }
 .main-title-container .main-title-container__title { display: inline-block; width: 187px; padding: 8px 6px; font-size: 28px; font-family: 'Lato', 
@@ -355,10 +355,10 @@ a:hover { color: var(--color-2); }
     
     .logo { position: absolute; top: 40px; left: 50px; width: 120px; height: 120px; }
     
-    .main-title-container { position: absolute; top: 140px; left: 240px; width: 478px; }
+    .main-title-container { position: absolute; left: 50px; top: 190px; width: 478px; }
     .main-title-container .main-title-container__title { width: 478px; padding: 10px 10px; font-size: 40px; }
 
-    .subtitle-container { display: inline-block; position: absolute; top: 220px; left: 240px; width: auto; max-width: none; padding: 10px 10px; }
+    .subtitle-container { display: inline-block; position: absolute; left: 50px; top: 270px; width: auto; max-width: none; padding: 10px 10px; }
    
     
     /*Footer*/
@@ -389,7 +389,7 @@ a:hover { color: var(--color-2); }
     
     
     /*Index*/
-    .page-index .pizza-order-content { opacity: 0.96; position: absolute; top: -320px; right: 0; width: 48%; max-width: 740px; }
+    .page-index .pizza-order-content { opacity: 0.96; position: absolute; top: -550px; right: 0; width: 48%; max-width: 740px; }
     
 }
 
@@ -399,11 +399,17 @@ a:hover { color: var(--color-2); }
     .inner-wrapper { width: 1540px; }
     
     
+    /*Header*/
+    .main-title-container { left: 240px; top: 140px; }
+    
+    .subtitle-container { left: 240px; top: 220px; }
+    
+    
     /*General groups styles*/
     .order-pizza__header { font-size: 32px; }
     
     
     /*Index page*/
-    .page-index .pizza-order-content { width: 50%; }
+    .page-index .pizza-order-content { top: -320px; width: 50%; }
     
 }
