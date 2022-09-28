@@ -258,10 +258,11 @@ a:hover { color: var(--color-2); }
 
 
 /*General sections*/
-.form__input-container { padding: 15px 0px; }
+.form__input-container,
+.form__text-container { padding: 15px 0px; }
 .form__label { display: inline-block; width: 100%; padding-bottom: 6px; }
-.form__input { display: inline-block; width: 100%; padding: 10px; border-radius: 15px; }
-.form__submit-button { opacity: 1; padding: 15px; border-radius: 15px; background-color: var(--color-1); color: #ffffff; text-align: center; cursor: pointer; transition: 0.4s ease-in; }
+.form__input { display: inline-block; width: 100%; padding: 10px; border-radius: 4px; }
+.form__submit-button { opacity: 1; padding: 15px; margin-bottom: 30px; border-radius: 15px; background-color: var(--color-1); color: #ffffff; text-align: center; cursor: pointer; transition: 0.4s ease-in; }
 .form__submit-button:hover { background-color: var(--color-3); transition: 0.4s ease-in; }
 .form__submit-button:disabled { opacity: 0.2; background-color: var(--color-1); cursor: default; transition: 0.4s ease-in; }
 
@@ -377,6 +378,7 @@ a:hover { color: var(--color-2); }
     
     /*General sections*/
     .form__input-container { float: left; width: 50%; padding-left: 15px; padding-right: 15px; }
+    .form__text-container { padding-left: 15px; padding-right: 15px; }
     
     
     /*General groups styles*/

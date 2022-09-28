@@ -221,14 +221,13 @@ class PizzaOrderContent extends React.Component {
                         <textarea id="orderComments" className="form__input" name="orderComments" onChange={this.adjustPizzaOrder} />
                         <div className="clear-both"></div>
                     </div>
-        
-                    <div className="form__input-container">
+                    <div class="form__text-container">                  
                         <input className="form__submit-button" id="orderPizzaButton" name="orderButton" type="submit" value="Pizza Time!" disabled="disabled" />
                         <div className="clear-both"></div>
-                    </div>
-                    <p>Pay at pick up, cash, debit, or credit gladly accepted.</p>
-                    <p>Note: For orders of more than 10 pizzas, please call us at 1-503-999-9999 
+                        <p>Pay at pick up, cash, debit, or credit gladly accepted.</p>
+                        <p>Note: For orders of more than 10 pizzas, please call us at 1-503-999-9999 
                         or <a href="contact-us.php"><strong>use our contact form</strong></a> <strong><em>at least 3 days in advance</em></strong> to ensure timely baking!  Thank you.</p>
+                    </div>
                 </form>
             </div>
         </div>;
