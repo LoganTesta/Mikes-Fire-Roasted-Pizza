@@ -253,7 +253,8 @@ a:hover { color: var(--color-2); }
 
 
 /*General classes*/
-.content__text { text-align: center; }
+.content__text { }
+.content__text h3 { text-align: center; }
 .content__content-image--small { height: 240px; margin-bottom: 20px; }
 
 
@@ -261,7 +262,7 @@ a:hover { color: var(--color-2); }
 .form__input-container,
 .form__text-container { padding: 15px 0px; }
 .form__label { display: inline-block; width: 100%; padding-bottom: 6px; }
-.form__input { display: inline-block; width: 100%; padding: 10px; border-radius: 4px; }
+.form__input { display: inline-block; width: 100%; padding: 10px; border-radius: 8px; }
 .form__submit-button { opacity: 1; padding: 15px; margin-bottom: 30px; border-radius: 15px; background-color: var(--color-1); color: #ffffff; text-align: center; cursor: pointer; transition: 0.4s ease-in; }
 .form__submit-button:hover { background-color: var(--color-3); transition: 0.4s ease-in; }
 .form__submit-button:disabled { opacity: 0.2; background-color: var(--color-1); cursor: default; transition: 0.4s ease-in; }
@@ -269,7 +270,7 @@ a:hover { color: var(--color-2); }
 .order-pizza { padding: 20px; margin-top: 20px; margin-bottom: 20px; border: 10px solid var(--color-2); border-radius: 30px; text-align: left;
               background-color: var(--color-5); color: var(--color-1); }
 .order-pizza__header { display: block; }
-.order-total { padding-bottom: 15px; font-size: 20px; font-weight: bold; }
+.order-summary { padding-bottom: 15px; font-size: 18px; font-weight: bold; }
 
 .content-background-container { }
 .content__content-image { width: 100%; min-height: 200px; margin: 0 auto; }

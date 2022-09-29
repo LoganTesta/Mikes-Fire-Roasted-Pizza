@@ -8,46 +8,46 @@ ob_start();
     <table class="pizza-table">
         <thead>
         <th>Pizza</td>
-        <th>Personal</th>
-        <th>Small</th>
-        <th>Medium</th>
-        <th>Large</th>
+        <th>Personal 7"</th>
+        <th>Small 10"</th>
+        <th>Medium 12"</th>
+        <th>Large 16"</th>
         </thead>
         <tbody>
             <tr>
                 <td>Cheese</td>
-                <td>$5.00</td>
+                <td>$6.00</td>
                 <td>$10.00</td>
-                <td>$11.00</td>
-                <td>$12.00</td>
+                <td>$14.00</td>
+                <td>$16.00</td>
             </tr>
             <tr>
                 <td>Veggie</td>
-                <td>$5.50</td>
-                <td>$12.00</td>
-                <td>$13.00</td>
-                <td>$14.00</td>
+                <td>$6.50</td>
+                <td>$11.00</td>
+                <td>$15.00</td>
+                <td>$18.00</td>
             </tr>
             <tr>
                 <td>Pepperoni</td>
-                <td>$5.75</td>
-                <td>$13.00</td>
-                <td>$14.00</td>
-                <td>$15.00</td>
+                <td>$7.00</td>
+                <td>$12.00</td>
+                <td>$16.00</td>
+                <td>$19.00</td>
             </tr>
             <tr>
                 <td>Supreme</td>
-                <td>$6.00</td>
-                <td>$14.00</td>
-                <td>$15.00</td>
+                <td>$7.00</td>
+                <td>$12.00</td>
                 <td>$16.00</td>
+                <td>$19.00</td>
             </tr>
             <tr>
                 <td>Hawaiian</td>
-                <td>$6.00</td>
-                <td>$14.00</td>
-                <td>$15.00</td>
+                <td>$7.00</td>
+                <td>$12.00</td>
                 <td>$16.00</td>
+                <td>$19.00</td>
             </tr>
         </tbody>
     </table>

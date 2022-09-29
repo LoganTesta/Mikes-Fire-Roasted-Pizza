@@ -30,12 +30,12 @@ session_start();
                         <div class="col-sma-6">
                             <div class="content__text">
                                 <h3>Affordable and Tasty Pizzas</h3>
-                                <p>Mike's Fire-Roasted Pizza makes quality and affordable pizzas.  We make every kind of pizza, from
-                                    small personal pizzas to a classic large pizza to enough pizzas
-                                    for an entire party.  We are one of the top pizza shops in the Portland area for catering, call us 
-                                    at 503-999-9999 or <a href="contact-us.php">contact us</a> at least 3 days in advance.</p>
                             </div>
                             <?php include 'assets/include/pizza-info-content.php'; ?>
+                            <p>Mike's Fire-Roasted Pizza makes quality and affordable pizzas.  We make every kind of pizza, from
+                            small personal pizzas to a classic large pizza to enough pizzas
+                            for an entire party.  We are one of the top pizza shops in the Portland area for catering, call us 
+                            at 503-999-9999 or <a href="contact-us.php">contact us</a> at least 3 days in advance.</p>
                             <div class="content-row">
                                 <div class="col-lar-6">
                                     <div class="content__content-image--small index-one"></div>
