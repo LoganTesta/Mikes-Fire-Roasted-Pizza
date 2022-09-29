@@ -158,7 +158,6 @@ class PizzaOrderContent extends React.Component {
             <p className="order-summary" name="orderTotalCost">Total: ${this.state.orderTotalCost}</p>
         
             <div>{this.state.validationFeedbackClientSide}</div>
-            <div>** Required</div>
             <div>
                 <form className="form pizza-order" name="pizzaOrder" method="post" action="validate-pizza-order-form.php">       
                     <input type="hidden" id="orderTotalCost" name="orderTotalCost" value={this.state.orderTotalCost} />
@@ -221,13 +220,17 @@ class PizzaOrderContent extends React.Component {
                         <textarea id="orderComments" className="form__input" name="orderComments" onChange={this.adjustPizzaOrder} />
                         <div className="clear-both"></div>
                     </div>
-                    <div class="form__text-container">                  
+                    <div className="form__input-container button-wrapper"> 
+                        <div class="form__explanation-text">** Required</div>
                         <input className="form__submit-button" id="orderPizzaButton" name="orderButton" type="submit" value="Pizza Time!" disabled="disabled" />
                         <div className="clear-both"></div>
+                    </div>
+                    <div class="form__text-container"> 
                         <p>Pay at pick up, cash, debit, or credit gladly accepted.</p>
                         <p>Note: For orders of more than 10 pizzas, please call us at 1-503-999-9999 
                         or <a href="contact-us.php"><strong>use our contact form</strong></a> <strong><em>at least 3 days in advance</em></strong> to ensure timely baking!  Thank you.</p>
                     </div>
+                     <div className="clear-both"></div>
                 </form>
             </div>
         </div>;

@@ -260,10 +260,12 @@ a:hover { color: var(--color-2); }
 
 /*General sections*/
 .form__input-container,
-.form__text-container { padding: 15px 0px; }
+.form__text-container { padding: 12px 0px; }
+.form__input-container.button-wrapper { width: 100%; padding-bottom: 30px; }
 .form__label { display: inline-block; width: 100%; padding-bottom: 6px; }
 .form__input { display: inline-block; width: 100%; padding: 10px; border-radius: 8px; }
-.form__submit-button { opacity: 1; padding: 15px; margin-bottom: 30px; border-radius: 15px; background-color: var(--color-1); color: #ffffff; text-align: center; cursor: pointer; transition: 0.4s ease-in; }
+.form__explanation-text { padding-bottom: 12px; }
+.form__submit-button { opacity: 1; padding: 15px; border-radius: 15px; background-color: var(--color-1); color: #ffffff; text-align: center; cursor: pointer; transition: 0.4s ease-in; }
 .form__submit-button:hover { background-color: var(--color-3); transition: 0.4s ease-in; }
 .form__submit-button:disabled { opacity: 0.2; background-color: var(--color-1); cursor: default; transition: 0.4s ease-in; }
 
@@ -333,7 +335,7 @@ a:hover { color: var(--color-2); }
     
     
     /*General sections*/
-    .form__label { float: left; padding-right: 10px; padding-bottom: 0; }
+    .form__label { float: left; padding-right: 10px; padding-bottom: 2px; }
     .form__input { float: left; }
     
     
@@ -378,14 +380,16 @@ a:hover { color: var(--color-2); }
     
     
     /*General sections*/
-    .form__input-container { float: left; width: 50%; padding-left: 15px; padding-right: 15px; }
-    .form__text-container { padding-left: 15px; padding-right: 15px; }
+    .form__input-container { float: left; width: 50%; }
+    .form__input-container:nth-of-type(2n+0) { padding-left: 15px; }
+    .form__input-container:nth-of-type(2n+1) { padding-right: 15px; }
+    .form__text-container { }
     
     
     /*General groups styles*/
     .content__content-image { height: 400px; }
     
-    .order-pizza__header { font-size: 28px; }
+    .order-pizza__header { font-size: 27px; text-align: center; }
 
     .pizza-table th { display: table-cell; width: 18%; }
     .pizza-table th:nth-of-type(1) { width: 28%; }
