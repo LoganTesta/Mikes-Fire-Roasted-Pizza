@@ -153,10 +153,7 @@ class PizzaOrderContent extends React.Component {
 
 
         return <div className="order-pizza" onMouseOver={this.checkValidity}>
-            <h3 className="order-pizza__header">Order a Pizza!  Pick it up in 30 Minutes!</h3>
-            <p className="order-summary" >Your Order: {this.state.orderTextOutput}</p>
-            <p className="order-summary" name="orderTotalCost">Total: ${this.state.orderTotalCost}</p>
-        
+            <h3 className="order-pizza__header">Order a Pizza!  Pick it up in 30 Minutes!</h3>        
             <div>{this.state.validationFeedbackClientSide}</div>
             <div>
                 <form className="form pizza-order" name="pizzaOrder" method="post" action="validate-pizza-order-form.php">       
@@ -225,12 +222,17 @@ class PizzaOrderContent extends React.Component {
                         <input className="form__submit-button" id="orderPizzaButton" name="orderButton" type="submit" value="Pizza Time!" disabled="disabled" />
                         <div className="clear-both"></div>
                     </div>
+                    <div className="form__input-container">
+                        <p className="order-summary" >Your Order: {this.state.orderTextOutput}</p>
+                        <p className="order-summary" name="orderTotalCost">Total: ${this.state.orderTotalCost}</p>
+                        <div className="clear-both"></div>
+                    </div>
                     <div class="form__text-container"> 
                         <p>Pay at pick up, cash, debit, or credit gladly accepted.</p>
                         <p>Note: For orders of more than 10 pizzas, please call us at 1-503-999-9999 
                         or <a href="contact-us.php"><strong>use our contact form</strong></a> <strong><em>at least 3 days in advance</em></strong> to ensure timely baking!  Thank you.</p>
                     </div>
-                     <div className="clear-both"></div>
+                    <div className="clear-both"></div>
                 </form>
             </div>
         </div>;

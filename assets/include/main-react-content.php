@@ -1,2 +1,2 @@
 
-        <script type="text/babel" src="assets/javascript/base-jsx/main-react-functions.jsx?mod=02082021"></script>
+        <script type="text/babel" src="assets/javascript/base-jsx/main-react-functions.jsx?mod=09292021"></script>
