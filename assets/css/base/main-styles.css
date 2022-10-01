@@ -201,21 +201,21 @@ a:hover { color: var(--color-2); }
 /*Nav*/
 #desktopNav { display: none; }
 #mobileNav { display: block; }
-.nav { background-color: rgba(255, 255, 255, 0.85); border-radius: 5px; }
+.nav { background-color: rgba(255, 255, 255, 0.95); border-radius: 5px; }
 
 /*Header*/
 .header { min-height: 320px; background: url("../../images/pizza-restaurant-tables.jpg") 0% 0%/cover no-repeat; }
 
 .logo { position: relative; top: 10px; width: 80px; height: 80px; margin-left: auto; margin-right: auto; }
 
-.main-title-container { position: relative; left: 0px; top: 30px; width: 187px;
+.main-title-container { position: relative; left: 0px; top: 26px; width: 187px;
                         margin-left: auto; margin-right: auto; border-radius: 10px; text-align: center; cursor: pointer;
-                        background-color: rgba(255, 255, 255, 0.85); }
-.main-title-container .main-title-container__title { display: inline-block; width: 187px; padding: 8px 6px; font-size: 28px; font-family: 'Lato', 
-                                  sans-serif; font-weight: bold; color: var(--color-1); }
+                        background-color: rgba(255, 255, 255, 0.95); box-shadow: 0 0 7px 3px rgba(255, 255, 255, 0.95); }
+.main-title-container .main-title-container__title { display: inline-block; width: 187px; padding: 8px 6px; font-size: 28px; 
+                                                     font-family: 'Lato', sans-serif; font-weight: bold; font-style: italic; color: var(--color-1); }
 
-.subtitle-container { position: relative; top: 40px; width: 100%; max-width: 270px; padding: 6px 6px; margin-left: auto; margin-right: auto; 
-    border-radius: 10px; text-align: center; background-color: rgba(255, 255, 255, 0.85); }
+.subtitle-container { position: relative; top: 38px; width: 100%; max-width: 270px; padding: 6px 6px; margin-left: auto; margin-right: auto; 
+    border-radius: 10px; text-align: center; background-color: rgba(255, 255, 255, 0.95); box-shadow: 0 0 7px 3px rgba(255, 255, 255, 0.95); }
 .subtitle-container__sub-title { padding: 0; color: var(--color-3); }
 
 
@@ -366,7 +366,7 @@ a:hover { color: var(--color-2); }
     .main-title-container { position: absolute; left: 50px; top: 190px; width: 478px; }
     .main-title-container .main-title-container__title { width: 478px; padding: 10px 10px; font-size: 40px; }
 
-    .subtitle-container { display: inline-block; position: absolute; left: 50px; top: 270px; width: auto; max-width: none; padding: 10px 10px; }
+    .subtitle-container { display: inline-block; position: absolute; left: 50px; top: 275px; width: auto; max-width: none; padding: 10px 10px; }
    
     
     /*Footer*/
@@ -420,7 +420,7 @@ a:hover { color: var(--color-2); }
     
     .main-title-container { left: 240px; top: 140px; }
     
-    .subtitle-container { left: 240px; top: 220px; }
+    .subtitle-container { left: 240px; top: 225px; }
     
     
     /*General groups styles*/
