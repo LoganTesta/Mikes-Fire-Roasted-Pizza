@@ -363,10 +363,10 @@ a:hover { color: var(--color-2); }
     
     .logo { position: absolute; top: 40px; left: 50px; width: 120px; height: 120px; }
     
-    .main-title-container { position: absolute; left: 50px; top: 190px; width: 270px; }
-    .main-title-container .main-title-container__title { width: 272px; padding: 10px 10px; font-size: 40px; }
+    .main-title-container { position: absolute; left: 50px; top: 190px; width: 286px; }
+    .main-title-container .main-title-container__title { width: 286px; padding: 10px 18px; font-size: 40px; }
 
-    .subtitle-container { display: inline-block; position: absolute; left: 50px; top: 335px; max-width: 318px; padding: 10px 10px; }
+    .subtitle-container { display: inline-block; position: absolute; left: 50px; top: 335px; max-width: 321px; padding: 8px 12px; }
    
     
     /*Footer*/
