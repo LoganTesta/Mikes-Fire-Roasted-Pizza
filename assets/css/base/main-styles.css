@@ -418,9 +418,9 @@ a:hover { color: var(--color-2); }
     /*Header*/
     .header { min-height: 650px; }
     
-    .main-title-container { left: 240px; top: 140px; }
+    .main-title-container { left: 200px; top: 140px; }
     
-    .subtitle-container { left: 240px; top: 280px; }
+    .subtitle-container { left: 200px; top: 280px; }
     
     
     /*General groups styles*/
