@@ -16,7 +16,7 @@
                 </div>
                 <div class="footer__copyright col-lar-4">
                     <p>&copy; <?php echo date("Y"); ?> Mike's Fire-Roasted Pizza. All Rights Reserved.</p>
-                    <p>Call us at 503-999-9999</p>
+                    <address>Call us at 503-999-9999</address>
                 </div>    
                 <div class="footer__hours col-lar-4">
                     <div class="day-hours">
